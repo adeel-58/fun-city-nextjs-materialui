@@ -85,11 +85,7 @@ export default function AboutUsSection() {
           </Typography>
 
           <Typography variant="body1" sx={{ opacity: 0.9, mb: 4, fontSize:"15px" ,}}>
-            Unsere innovativen Automaten ermöglichen es dir, mit jeder<br />{" "}
-            eingeworfenen Münze Punkte zu sammeln. Diese Punkte kannst du
-            später<br /> gegen tolle Prämien eintauschen – ganz einfach und
-            transparent. Ob<br /> für kleine oder große Gewinne, unsere
-            Automaten sorgen für Unterhaltung und<br /> echte Überraschungen.
+            Unsere innovativen Automaten ermöglichen es dir{","} mit jeder<br/> eingeworfenen Münze Punkte zu sammeln. Diese Punkte kannst du später<br/> gegen tolle Prämien eintauschen – ganz einfach und transparent. Ob<br/> allein oder mit Freunden: Unsere Automaten sorgen für Unterhaltung und <br/>echte Gewinnchancen.
           </Typography>
 
           <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize:"15px" , }}>

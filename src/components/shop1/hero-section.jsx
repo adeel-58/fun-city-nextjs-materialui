@@ -58,6 +58,7 @@ export default function HeroSection() {
                         Münze einwerfen. <br />
                         Punkte sammeln. <br />
                         Gewinne aussuchen!
+                        
                     </Typography>
 
                     <Typography

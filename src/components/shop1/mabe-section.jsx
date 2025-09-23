@@ -12,7 +12,7 @@ export default function MaßeSection() {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-
+                
                 color: "white",
                 py: 10,
                 px: { xs: 2, md: 6 },
