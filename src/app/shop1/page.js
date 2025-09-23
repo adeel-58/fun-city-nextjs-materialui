@@ -1,5 +1,6 @@
 "use client";
 import { Box } from "@mui/material"; 
+import Image from "next/image";
 import Herosection from "../../components/shop1/hero-section";
 import AboutUsSection from "../../components/shop1/about-us-section";
 import HowItWorksSection from "../../components/shop1/how-it-works";
@@ -11,13 +12,33 @@ export default function Shop1() {
   return (
     <Box
       sx={{
-        bgcolor: "#121214", // 👈 your background color
-       // color: "white",
-        minHeight: "100vh", // ensures full page coverage
+        bgcolor: "#121214", 
+        minHeight: "100vh",
+        position: "relative", // 👈 important for absolute positioning
       }}
     >
       <Herosection />
       <AboutUsSection />
+
+      {/* Floating Coin between AboutUs and Mabe */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: "1300px", // 👈 adjust so it's exactly between the 2 sections
+          left:-30, // 👈 adjust horizontal position
+          zIndex: 20, // higher than sections
+          width: { xs: 100, md: 250 },
+        }}
+      >
+        <Image
+          src="/shop1/side-coin-shop1.webp"
+          alt="Coin Overlay"
+          width={180}
+          height={180}
+          style={{ width: "100%", height: "auto" }}
+        />
+      </Box>
+
       <MabeSection />
       <HowItWorksSection />
       <PhotoGallerySection />

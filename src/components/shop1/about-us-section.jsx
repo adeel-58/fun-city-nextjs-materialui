@@ -25,6 +25,7 @@ export default function AboutUsSection() {
           zIndex: 1,
           width: { xs: 300, md: 600 },
           opacity: 0.8,
+          
         }}
       >
         <Image
@@ -36,23 +37,7 @@ export default function AboutUsSection() {
         />
       </Box>
 
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: -100,
-          left: "-40px",
-          zIndex: 100,
-          width: { xs: 120, md: 200 },
-        }}
-      >
-        <Image
-          src="/shop1/side-coin-shop1.webp"
-          alt="Coin Overlay"
-          width={200}
-          height={200}
-          style={{ width: "100%", height: "auto" }}
-        />
-      </Box>
+      
 
       {/* Heading + Full Width Line */}
       <Box sx={{ position: "relative", zIndex: 10, mb: 4 ,ml:2,}}>

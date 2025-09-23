@@ -34,6 +34,7 @@ export default function Contactsection() {
         overflow: "hidden",
         minHeight: "100vh",
         
+        
       }}
     >
       {/* Background overlay image */}

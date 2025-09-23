@@ -27,9 +27,9 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: "Shop 1", href: "/" },
+    { label: "Shop 1", href: "/shop1" },
     { label: "Shop 2", href: "/shop2" },
-    { label: "Piramide", href: "/piramide" },
+    { label: "Piramide", href: "/" },
   ];
 
   return (
@@ -51,8 +51,16 @@ export default function Navbar() {
         >
           {/* Left - Logo */}
           <Box>
-            <Image src="/logo.webp" alt="Fun City Logo" width={190} height={65} />
-          </Box>
+  <Link href="/" passHref>
+    <Image 
+      src="/logo.webp" 
+      alt="Fun City Logo" 
+      width={190} 
+      height={65} 
+      style={{ cursor: "pointer" }}
+    />
+  </Link>
+</Box>
 
           {/* Center - Links (hidden on mobile) */}
 <Box sx={{ display: { xs: "none", md: "flex" }, gap: 4 }}>

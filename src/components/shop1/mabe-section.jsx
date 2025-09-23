@@ -79,11 +79,9 @@ export default function MaßeSection() {
 
                     <Typography
                         variant="body2"
-                        sx={{ mt: 2, opacity: 0.85, fontStyle: "italic" }}
+                        sx={{ mt: 5, opacity: 1, fontStyle: "normal" }}
                     >
-                        Der Hauptshop bietet einen angenehmen, gut organisierten Raum – ideal
-                        für Spielspaß und Gewinne. Praktisch und einladend fügt er sich
-                        nahtlos in die Jahrmarktsatmosphäre ein.
+                       Technische Daten:Breite - 12,00m<br/>Tiefe -5,70m open
                     </Typography>
                 </Box>
             </Box>

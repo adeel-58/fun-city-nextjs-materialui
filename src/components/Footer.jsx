@@ -12,6 +12,7 @@ export default function Footer() {
         color: "white",
         py: 16,
         overflow: "hidden",
+       
       }}
     >
       {/* Background coin image */}
