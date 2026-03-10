@@ -2,7 +2,7 @@
 
 /* Import Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 html, body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
@@ -24,4 +24,19 @@ body::-webkit-scrollbar {
 * {
   box-sizing: border-box;
   font-family: inherit; /* ensure children use Poppins too */
+}
+
+.close-line1,
+.close-line2 {
+  transition: all 0.3s ease;
+}
+
+.MuiIconButton-root:hover {
+  stroke: #8E4EC4;
+}
+
+.MuiIconButton-root:hover .close-line1,
+.MuiIconButton-root:hover .close-line2 {
+  stroke: #8E4EC4;
+  transform: scale(0.9);
 }

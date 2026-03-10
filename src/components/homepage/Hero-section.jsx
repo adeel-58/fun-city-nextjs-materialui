@@ -1,34 +1,54 @@
 "use client";
 
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 export default function Herosection() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // mobile breakpoint
+
   return (
     <Box
-  sx={{
-    position: "relative",
-    width: "100vw",   // ensure full width
-    height: "100vh",  // full height of screen
-    overflow: "hidden",
-  }}
->
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    preload="auto"
-    controls={false}
-    style={{
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-    }}
-    poster="/homepage/hero-poster.webp"
-  >
-    <source src="/movie1.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+      sx={{
+        position: "relative",
+        width: "100vw",
+        height: { xs: "60vh", sm: "100vh" }, // mobile 60% height, desktop full
+        overflow: "hidden",
+      }}
+    >
+      {/* Video for desktop */}
+      {!isMobile && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          controls={false}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+          poster="/homepage/hero-poster.webp"
+        >
+          <source src="/movie1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
+
+      {/* Image for mobile */}
+      {isMobile && (
+        <Box
+          component="img"
+          src="/homepage/mobile-hero.webp"
+          alt="Hero Mobile"
+          sx={{
+            width: "100%",
+            height: "60vh", // control the length of the photo on mobile
+            objectFit: "cover",
+          }}
+        />
+      )}
 
       {/* Overlay Content */}
       <Box
@@ -48,7 +68,7 @@ export default function Herosection() {
           px: 2,
         }}
       >
-        
+        {/* Add your text/buttons here */}
       </Box>
     </Box>
   );

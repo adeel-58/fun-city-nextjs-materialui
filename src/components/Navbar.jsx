@@ -13,14 +13,16 @@ import {
   Drawer,
   List,
   ListItem,
+  ListItemButton,
   ListItemText,
-  Link as MuiLink, // 👈 import MUI Link properly
+  Link as MuiLink,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-
+import CloseIcon from "@mui/icons-material/Close";
+//import ListItemButton from "@mui/material/ListItemButton";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname(); // 👈 to detect active link
+  const pathname = usePathname();
 
   const toggleDrawer = (state) => () => {
     setOpen(state);
@@ -29,9 +31,15 @@ export default function Navbar() {
   const navLinks = [
     { label: "Shop 1", href: "/shop1" },
     { label: "Shop 2", href: "/shop2" },
-    { label: "Piramide", href: "/" },
+    { label: "Piramide", href: "/pyramid" },
   ];
-
+  const menuLinks = [
+    { label: "Shop 1", href: "/shop1" },
+    { label: "Shop 2", href: "/shop2" },
+    { label: "Piramide", href: "/pyramid" },
+    { label: "About Us", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ];
   return (
     <>
       <AppBar
@@ -45,76 +53,74 @@ export default function Navbar() {
         <Toolbar
           sx={{
             justifyContent: "space-between",
-            minHeight: { xs: "70px", md: "100px" }, // responsive height
-            px: { xs: 2, md: 8 }, // horizontal padding
+            minHeight: { xs: "70px", md: "100px" },
+            px: { xs: 2, md: 8 },
           }}
         >
           {/* Left - Logo */}
-          <Box>
-  <Link href="/" passHref>
-    <Image 
-      src="/logo.webp" 
-      alt="Fun City Logo" 
-      width={190} 
-      height={65} 
-      style={{ cursor: "pointer" }}
-    />
-  </Link>
-</Box>
+          <Box sx={{ width: { xs: 100, sm: 150, md: 190 }, height: "auto" }}>
+            <Link href="/" passHref>
+              <Image
+                src="/logo.webp"
+                alt="Fun City Logo"
+                width={190}
+                height={65}
+                style={{ cursor: "pointer", width: "100%", height: "auto" }}
+              />
+            </Link>
+          </Box>
 
-          {/* Center - Links (hidden on mobile) */}
-<Box sx={{ display: { xs: "none", md: "flex" }, gap: 4 }}>
-  {navLinks.map((link) => (
-    <MuiLink
-      key={link.href}
-      component={Link}
-      href={link.href}
-      color="inherit"
-      underline={pathname === link.href ? "always" : "hover"} // active vs hover
-      sx={{
-        px: 1.5, // padding left & right
-        py: 0.5, // padding top & bottom
-        fontSize: "15px", // slightly bigger font
-        fontWeight:  "bold", // active bold
-        fontFamily: "'Poppins', sans-serif", // custom font family
-
-         textUnderlineOffset: "8px", // move underline further down
-    textDecorationThickness: "3px",
-        textTransform: "none",
-        "&:hover": {
-          textDecorationColor: "#8E4EC4", // custom underline color
-          textUnderlineOffset: "8px", // move underline further down
-    textDecorationThickness: "3px",
-        },
-        ...(pathname === link.href && {
-      textDecorationColor: "#8E4EC4", // active underline color
-    }),
-        
-      }}
-    >
-      {link.label}
-    </MuiLink>
-  ))}
-</Box>
+          {/* Center - Links */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 4 }}>
+            {navLinks.map((link) => (
+              <MuiLink
+                key={link.href}
+                component={Link}
+                href={link.href}
+                color="inherit"
+                underline={pathname === link.href ? "always" : "hover"}
+                sx={{
+                  px: 1.5,
+                  py: 0.5,
+                  fontSize: "15px",
+                  fontWeight: "bold",
+                  fontFamily: "'Poppins', sans-serif",
+                  textUnderlineOffset: "8px",
+                  textDecorationThickness: "3px",
+                  textTransform: "none",
+                  "&:hover": {
+                    textDecorationColor: "#E5871A",
+                    textUnderlineOffset: "8px",
+                    textDecorationThickness: "3px",
+                  },
+                  ...(pathname === link.href && {
+                    textDecorationColor: "#E5871A",
+                  }),
+                }}
+              >
+                {link.label}
+              </MuiLink>
+            ))}
+          </Box>
 
           {/* Right - Menu / Hamburger */}
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton onClick={toggleDrawer(true)}>
-              <MenuIcon />
+              <MenuIcon sx={{ fontSize: { xs: 32, md: 40 }, color: "#E5871A" }} />
             </IconButton>
           </Box>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Button
               variant="contained"
+              onClick={toggleDrawer(true)}
               sx={{
                 borderRadius: "20px",
-                background: "#8E4EC4",
-                px: 6.6, // left & right padding
-                py: 0.8, // top & bottom padding
+                background: "#E5871A",
+                px: 6.6,
+                py: 0.8,
                 textTransform: "none",
                 fontSize: "15px",
-
                 fontFamily: "'Poppins', sans-serif",
               }}
             >
@@ -125,21 +131,65 @@ export default function Navbar() {
       </AppBar>
 
       {/* Drawer for Mobile */}
-      <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-        <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-          <List>
-            {navLinks.map((link) => (
-              <ListItem
-                button
-                key={link.href}
-                component={Link}
-                href={link.href}
-                selected={pathname === link.href} // highlight active in drawer
-              >
-                <ListItemText primary={link.label} />
+      {/* Drawer for Mobile */}
+      <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
+        <Box
+          sx={{
+            width: "30vw",
+            height: "100vh",
+            bgcolor: "#4C1663",
+            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "flex-start",
+            pl: { xs: 6, md: 12 },
+            pt: { lg: 10, xl: 12 },
+            position: "relative",
+          }}
+        >
+
+          {/* Close Button */}
+
+          <List sx={{ textAlign: "left" }}>
+            {menuLinks.map((link) => (
+              <ListItem key={link.href} disablePadding sx={{ justifyContent: "flex-start" }}>
+                <ListItemButton
+                  component={Link}
+                  href={link.href}
+                  onClick={toggleDrawer(false)}
+                  sx={{
+                    justifyContent: "flex-start",
+
+                    /* MENU LINK STYLE */
+                    fontSize: "28px",          // ⭐ CHANGE FONT SIZE HERE
+                    fontFamily: "'Poppins', sans-serif", // ⭐ CHANGE FONT HERE
+                    fontWeight: 600,
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                    py: 0,
+
+                    color: pathname === link.href ? "#E5871A" : "white", // ⭐ ACTIVE COLOR
+
+                    "&:hover": {
+                      color: "#E5871A", // ⭐ HOVER COLOR
+                      background: "transparent",
+                    },
+                  }}
+                >
+                  <ListItemText
+                    primary={link.label}
+                    primaryTypographyProps={{
+                      fontSize: "inherit",
+                      fontWeight: "inherit",
+                      fontFamily: "inherit",
+                    }}
+                  />
+                </ListItemButton>
               </ListItem>
             ))}
           </List>
+
         </Box>
       </Drawer>
     </>

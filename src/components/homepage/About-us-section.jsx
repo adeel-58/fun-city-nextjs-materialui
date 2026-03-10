@@ -175,25 +175,44 @@ export default function AboutUsSection() {
           sx={{ mt: 13 }}
         >
           <Button
-            variant="contained"
-            sx={{
-              position: "relative",
-              bgcolor: "#5C026B",
-              color: "white",
-              fontWeight: "bold",
-              px: 15,
-              py: 3,
-              borderRadius: "0 40px 40px 0", // only top-right and bottom-right corners rounded
-              textTransform: "none",
-              overflow: "hidden",
-              zIndex: 1,
-              ml: -15, // negative margin to attach to left edge of container
-              transform: isButtonVisible ? "translateX(0)" : "translateX(-100%)",
-              transition: "transform 0.6s ease-out",
-            }}
-          >
-            SEE SHOP 1
-          </Button>
+  variant="contained"
+  sx={{
+    position: "relative",
+    bgcolor: "#5C026B",
+    color: "white",
+    fontWeight: "bold",
+    py: 3,
+    ml:-15,
+    borderRadius: "0 40px 40px 0",
+    textTransform: "none",
+    overflow: "hidden",
+    zIndex: 1,
+
+    // ✅ Responsive width
+    width: {
+      xs: "85%",     // mobile
+      sm: "65%",     // small tablets
+      md: "320px",   // normal desktop
+      lg: "350px",   // large desktop
+      xl: "520px",   // 1920px+
+    },
+     ml: {
+        // normal desktop
+      lg: -15,   // large desktop
+      xl: -35,   // 1920px+
+    },
+
+    // Remove fixed px padding for width control
+    px: 4,
+
+    transform: isButtonVisible
+      ? "translateX(0)"
+      : "translateX(-100%)",
+    transition: "transform 0.6s ease-out",
+  }}
+>
+  SEE SHOP 1
+</Button>
         </Box>
       </Container>
     </Box>
