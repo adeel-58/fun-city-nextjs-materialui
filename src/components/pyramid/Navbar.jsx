@@ -58,14 +58,14 @@ export default function Navbar() {
           }}
         >
           {/* Left - Logo */}
-          <Box>
+          <Box sx={{ width: { xs: 120, sm: 150, md: 190 }, height: "auto" }}>
             <Link href="/" passHref>
               <Image
-                src="/logo.webp"
+                src="/pyramid/pyramid-logo.png"
                 alt="Fun City Logo"
-                width={190}
+                width={190} // you still need these values for next/image optimization
                 height={65}
-                style={{ cursor: "pointer" }}
+                style={{ width: "100%", height: "auto", cursor: "pointer" }} // 👈 responsive
               />
             </Link>
           </Box>
@@ -105,8 +105,12 @@ export default function Navbar() {
 
           {/* Right - Menu / Hamburger */}
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton onClick={toggleDrawer(true)}>
-              <MenuIcon />
+            <IconButton
+              onClick={toggleDrawer(true)}
+              disableRipple // 👈 disables the click ripple effect
+              sx={{ backgroundColor: "transparent" }} // optional: keep background transparent
+            >
+              <MenuIcon sx={{ fontSize: { xs: 32, md: 40 }, color: "#ffffff" }} />
             </IconButton>
           </Box>
 
@@ -135,7 +139,7 @@ export default function Navbar() {
       <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
         <Box
           sx={{
-            width: "30vw",
+            width: { xs: "75vw", sm: "60vw", md: "30vw" }, // responsive width
             height: "100vh",
             bgcolor: "#2C3D29",
             color: "white",
@@ -143,17 +147,15 @@ export default function Navbar() {
             flexDirection: "column",
             justifyContent: "flex-start",
             alignItems: "flex-start",
-            pl: { xs: 6, md: 12 },
-            pt:{lg:10,xl:12},
+            pl: { xs: 4, md: 12 }, // smaller padding on mobile
+            pt: { xs: 6, lg: 10, xl: 12 },
             position: "relative",
           }}
         >
 
-          {/* Close Button */}
-          
-          <List sx={{ textAlign: "left" }}>
+          <List sx={{ textAlign: "left", width: "100%" }}>
             {menuLinks.map((link) => (
-              <ListItem key={link.href} disablePadding sx={{ justifyContent: "flex-start" }}>
+              <ListItem key={link.href} disablePadding>
                 <ListItemButton
                   component={Link}
                   href={link.href}
@@ -161,18 +163,17 @@ export default function Navbar() {
                   sx={{
                     justifyContent: "flex-start",
 
-                    /* MENU LINK STYLE */
-                    fontSize: "28px",          // ⭐ CHANGE FONT SIZE HERE
-                    fontFamily: "'Poppins', sans-serif", // ⭐ CHANGE FONT HERE
+                    fontSize: { xs: "18px", sm: "22px", md: "28px" }, // responsive font
+                    fontFamily: "'Poppins', sans-serif",
                     fontWeight: 600,
-                    letterSpacing: "2px",
+                    letterSpacing: { xs: "1px", md: "2px" },
                     textTransform: "uppercase",
-                    py: 0,
+                    py: { xs: 0.5, md: 0 },
 
-                    color: pathname === link.href ? "#DF1232" : "white", // ⭐ ACTIVE COLOR
+                    color: pathname === link.href ? "#DF1232" : "white",
 
                     "&:hover": {
-                      color: "#DF1232", // ⭐ HOVER COLOR
+                      color: "#DF1232",
                       background: "transparent",
                     },
                   }}

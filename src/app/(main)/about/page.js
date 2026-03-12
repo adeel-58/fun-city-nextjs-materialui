@@ -1,17 +1,279 @@
+"use client";
+import { Box, Typography, Container } from "@mui/material";
+import Image from "next/image";
 
+const shops = [
+  {
+    id: "shop1",
+    label: "SHOP 01",
+    name: "Shop 1 — Münzautomat",
+    tagline: "Wir bringen Spielspaß und Belohnung zusammen!",
+    description:
+      "Unsere innovativen Automaten ermöglichen es dir, mit jeder eingeworfenen Münze Punkte zu sammeln. Diese Punkte kannst du später gegen tolle Prämien eintauschen – ganz einfach und transparent. Ob allein oder mit Freunden: Unsere Automaten sorgen für Unterhaltung und echte Gewinnchancen.",
+    accent: "#8E4EC4",
+    bgColor: "#121214",
+    mainImage: "/shop1/shop-image-shop1.webp",
+    images: [
+      "/shop1/image5-shop1.png",
+      "/shop1/image6-shop1.webp",
+      "/shop1/image7-shop1.webp",
+    ],
+    dimensionImg: "/shop1/dimension-img.png",
+  },
+  {
+    id: "shop2",
+    label: "SHOP 02",
+    name: "Shop 2 — Greifautomat",
+    tagline: "Greif dein Glück!",
+    description:
+      "Tauche ein in Spielspaß und Spannung! Wirf eine Münze ein, bewege den Hebel und fang dein Kuscheltier. Jeder Versuch bringt Freude und die Chance auf einen plüschigen Gewinn.",
+    accent: "#C45E4E",
+    bgColor: "#4C1663",
+    mainImage: "/shop2/about-us.png",
+    images: [
+      "/shop2/img4.png",
+      "/shop2/img5.png",
+      "/shop2/img6.png",
+    ],
+    dimensionImg: "/shop2/dimension-shop2.png",
+  },
+  {
+    id: "pyramid",
+    label: "PYRAMID",
+    name: "Pyramid Shop",
+    tagline: "Wir bringen Spielspaß und Belohnung zusammen!",
+    description:
+      "Shop 2 ist der Ort, an dem Spielspaß auf süße Gewinne trifft. Mit nur einer Münze und etwas Glück steuerst du die Klaue und fangst bunte Plüschtiere. Spannung, Freude und ein kuscheliges Andenken bei jedem Versuch!",
+    accent: "#DF1232",
+    bgColor: "#2C3D29",
+    mainImage: "/pyramid/about-us.png",
+    images: [
+      "/pyramid/gallary-image1.png",
+      "/pyramid/gallary-image4.png",
+      "/pyramid/gallary-image3.png",
+    ],
+    dimensionImg: "/shop1/dimension-img.png",
+  },
+];
 
-import AboutUsSection from "../../../components/about/About-us-section";
-import Shop3section from '../../../components/about/Shop3-section';
-
-export default function HomePage() {
+export default function AboutUsPage() {
   return (
-    <>
+    <Box sx={{ bgcolor: "#121214", minHeight: "100vh", color: "white" }}>
+
+      {/* ── HERO ── */}
+      <Box
+        sx={{
+          position: "relative",
+          overflow: "hidden",
+          pt:15,
+          height: {xs:"30vh",md:"60vh"},
+          bgcolor: "#121214",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+        }}
+      >
+        <Container maxWidth="md" sx={{ position: "relative", zIndex: 2 }}>
+          <Typography
+            variant="h1"
+            sx={{
+              fontWeight: 900,
+              fontSize: { xs: "1.8rem", md: "3rem" },
+              lineHeight: 1.1,
+              mb: 3,
+              fontFamily: "Poppins, serif",
+              color: "white",
+            }}
+          >
+            Über uns
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              opacity: 0.7,
+              fontWeight: 300,
+              maxWidth: 600,
+              mx: "auto",
+              lineHeight: 1.8,
+              fontSize: { xs: "0.75rem", md: "1.15rem" },
+            }}
+          >
+            Drei einzigartige Shops. Ein Ziel: Spielspaß, Spannung und echte Gewinne für jeden.
+          </Typography>
+
+         
+        </Container>
+      </Box>
+
+      {/* ── SHOP SECTIONS ── */}
+      {shops.map((shop) => (
+        <Box
+          key={shop.id}
+          sx={{
+            bgcolor: shop.bgColor,
+            py: { xs: 8, md: 14 },
+           // borderTop: "1px solid rgba(255,255,255,0.05)",
+          }}
+        >
+          <Container maxWidth="lg">
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                alignItems: "center",
+                gap: { xs: 4, md: 8 },
+              }}
+            >
+
+              {/* ── LEFT: Text ── */}
+              <Box sx={{ flex: "0 0 auto", width: { xs: "100%", md: "38%" } }}>
+                <Typography
+                  variant="overline"
+                  sx={{
+                    color: shop.accent,
+                    letterSpacing: 5,
+                    fontSize: "0.7rem",
+                    display: "block",
+                    mb: 1.5,
+                  }}
+                >
+                  {shop.label}
+                </Typography>
+
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontWeight: 800,
+                    fontSize: { xs: "1rem", md: "1.8rem" },
+                    fontFamily: "Georgia, serif",
+                    mb: 1.5,
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {shop.name}
+                </Typography>
+
+                <Box sx={{ width: 60, height: 4, bgcolor: shop.accent, borderRadius: "2px", mb: 3 }} />
+
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontWeight: 600,
+                    fontSize: { xs: "1rem", md: "1.1rem" },
+                    mb: 2.5,
+                    opacity: 0.95,
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {shop.tagline}
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  sx={{
+                    opacity: 0.75,
+                    lineHeight: 1.9,
+                    fontSize: { xs: "0.9rem", md: "0.95rem" },
+                  }}
+                >
+                  {shop.description}
+                </Typography>
+                {/* Dimension image */}
+                <Box
+                  sx={{
+                    mt: 4,
+                    //borderRadius: "12px",
+                    overflow: "hidden",
+                    //border: `1px solid ${shop.accent}33`,
+                    maxWidth: "280px",
+                  }}
+                >
+                  <Image
+                    src={shop.dimensionImg}
+                    alt="Dimension"
+                    width={280}
+                    height={180}
+                    style={{ width: "100%", height: "auto", display: "block" }}
+                  />
+                </Box>
+              </Box>
+
+              {/* ── RIGHT: Images ── */}
+              <Box sx={{ flex: 1, width: { xs: "100%", md: "auto" } }}>
+                {/* Main large image */}
+                <Box
+                  sx={{
+                    borderRadius: "20px",
+                    overflow: "hidden",
+                    mb: 2,
+                    height: { xs: "240px", md: "360px" },
+                   // border: `1px solid ${shop.accent}33`,
+                    boxShadow: `0 20px 60px ${shop.accent}22`,
+                    position: "relative",
+                  }}
+                >
+                  <Image
+                    src={shop.mainImage}
+                    alt={shop.name}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      height: "3px",
+                      background: `linear-gradient(90deg, transparent, ${shop.accent}, transparent)`,
+                    }}
+                  />
+                </Box>
+
+                {/* 3 smaller images */}
+                <Box
+                  sx={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr 1fr 1fr",
+                    gap: { xs: 1, md: 1.5 },
+                  }}
+                >
+                  {shop.images.map((src, i) => (
+                    <Box
+                      key={i}
+                      sx={{
+                        borderRadius: "14px",
+                        overflow: "hidden",
+                        height: { xs: "85px", md: "120px" },
+                       // border: `1px solid ${shop.accent}22`,
+                        transition: "transform 0.2s, box-shadow 0.2s",
+                        "&:hover": {
+                          transform: "scale(1.04)",
+                          boxShadow: `0 8px 24px ${shop.accent}33`,
+                        },
+                      }}
+                    >
+                      <Image
+                        src={src}
+                        alt={`${shop.name} ${i + 1}`}
+                        width={300}
+                        height={200}
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      />
+                    </Box>
+                  ))}
+                </Box>
+              </Box>
+
+            </Box>
+          </Container>
+        </Box>
+      ))}
+
+      {/* ── BOTTOM CTA ── */}
       
-      
-    <AboutUsSection/>
-    <Shop3section/>
-    
-      {/* Add more sections below if needed */}
-    </>
+
+    </Box>
   );
 }

@@ -3,6 +3,7 @@ import { Box, Typography, Container, Grid } from "@mui/material";
 import Image from "next/image";
 
 export default function Footer() {
+  
   return (
     <Box
       component="footer"
@@ -62,12 +63,13 @@ export default function Footer() {
           </Grid>
 
           {/* About Us column */}
-          <Grid item xs={12} sm={6} md={2}>
+          <Grid item xs={12} sm={6} md={2} sx={{ ml: { xs: 6, md: 0 } }}>
             <Typography
               variant="h6"
               sx={{
                 fontWeight: "bold",
                 mb: 2,
+                
                 fontSize: "16px",
               }}
             >
@@ -109,7 +111,7 @@ export default function Footer() {
           </Grid>
 
           {/* Services column */}
-          <Grid item xs={12} sm={6} md={2}>
+          <Grid item xs={12} sm={6} md={2}  sx={{ ml: { xs: 6, md: 0 } }}>
             <Typography
               variant="h6"
               sx={{

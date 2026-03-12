@@ -58,7 +58,7 @@ export default function Navbar() {
           }}
         >
           {/* Left - Logo */}
-          <Box sx={{ width: { xs: 100, sm: 150, md: 190 }, height: "auto" }}>
+          <Box sx={{ width: { xs: 120, sm: 150, md: 190 }, height: "auto" }}>
             <Link href="/" passHref>
               <Image
                 src="/logo.webp"
@@ -106,7 +106,7 @@ export default function Navbar() {
           {/* Right - Menu / Hamburger */}
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton onClick={toggleDrawer(true)}>
-              <MenuIcon sx={{ fontSize: { xs: 32, md: 40 }, color: "#E5871A" }} />
+              <MenuIcon sx={{ fontSize: { xs: 32, md: 40 }, color: "#ffffff" }} />
             </IconButton>
           </Box>
 
@@ -133,65 +133,60 @@ export default function Navbar() {
       {/* Drawer for Mobile */}
       {/* Drawer for Mobile */}
       <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
-        <Box
-          sx={{
-            width: "30vw",
-            height: "100vh",
-            bgcolor: "#4C1663",
-            color: "white",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: "flex-start",
-            pl: { xs: 6, md: 12 },
-            pt: { lg: 10, xl: 12 },
-            position: "relative",
-          }}
-        >
+  <Box
+    sx={{
+      width: { xs: "75vw", sm: "60vw", md: "30vw" }, // wider on mobile
+      height: "100vh",
+      bgcolor: "#4C1663",
+      color: "white",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "flex-start",
+      alignItems: "flex-start",
+      pl: { xs: 4, md: 12 }, // smaller padding for mobile
+      pt: { xs: 6, lg: 10, xl: 12 },
+      position: "relative",
+    }}
+  >
+    <List sx={{ textAlign: "left", width: "100%" }}>
+      {menuLinks.map((link) => (
+        <ListItem key={link.href} disablePadding>
+          <ListItemButton
+            component={Link}
+            href={link.href}
+            onClick={toggleDrawer(false)}
+            sx={{
+              justifyContent: "flex-start",
 
-          {/* Close Button */}
+              fontSize: { xs: "18px", sm: "22px", md: "28px" }, // responsive text
+              fontFamily: "'Poppins', sans-serif",
+              fontWeight: 600,
+              letterSpacing: { xs: "1px", md: "2px" },
+              textTransform: "uppercase",
+              py: { xs: 0.5, md: 0 },
 
-          <List sx={{ textAlign: "left" }}>
-            {menuLinks.map((link) => (
-              <ListItem key={link.href} disablePadding sx={{ justifyContent: "flex-start" }}>
-                <ListItemButton
-                  component={Link}
-                  href={link.href}
-                  onClick={toggleDrawer(false)}
-                  sx={{
-                    justifyContent: "flex-start",
+              color: pathname === link.href ? "#E5871A" : "white",
 
-                    /* MENU LINK STYLE */
-                    fontSize: "28px",          // ⭐ CHANGE FONT SIZE HERE
-                    fontFamily: "'Poppins', sans-serif", // ⭐ CHANGE FONT HERE
-                    fontWeight: 600,
-                    letterSpacing: "2px",
-                    textTransform: "uppercase",
-                    py: 0,
-
-                    color: pathname === link.href ? "#E5871A" : "white", // ⭐ ACTIVE COLOR
-
-                    "&:hover": {
-                      color: "#E5871A", // ⭐ HOVER COLOR
-                      background: "transparent",
-                    },
-                  }}
-                >
-                  <ListItemText
-                    primary={link.label}
-                    primaryTypographyProps={{
-                      fontSize: "inherit",
-                      fontWeight: "inherit",
-                      fontFamily: "inherit",
-                    }}
-                  />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-
-        </Box>
-      </Drawer>
+              "&:hover": {
+                color: "#E5871A",
+                background: "transparent",
+              },
+            }}
+          >
+            <ListItemText
+              primary={link.label}
+              primaryTypographyProps={{
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                fontFamily: "inherit",
+              }}
+            />
+          </ListItemButton>
+        </ListItem>
+      ))}
+    </List>
+  </Box>
+</Drawer>
     </>
   );
 }

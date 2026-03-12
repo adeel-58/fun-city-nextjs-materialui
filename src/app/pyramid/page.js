@@ -13,6 +13,7 @@ export default function Shop1() {
     <Box
       sx={{
         bgcolor: "#121214", 
+        bgcolor: "#2C3D29",
         minHeight: "100vh",
         position: "relative", // 👈 important for absolute positioning
       }}
@@ -24,10 +25,11 @@ export default function Shop1() {
       <Box
         sx={{
           position: "absolute",
-          top: "1250px", // 👈 adjust so it's exactly between the 2 sections
-          left:-30, // 👈 adjust horizontal position
+          top:{ xs: "1100px", md: "1250px" },
+          
+          left: { xs: -20, md: -30} ,// 👈 adjust horizontal position
           zIndex: 20, // higher than sections
-          width: { xs: 100, md: 250, lg:500 },
+          width: { xs: 150, md: 250, lg:500 },
         }}
       >
         <Image

@@ -1,75 +1,64 @@
 "use client";
 
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box } from "@mui/material";
 
 export default function Herosection() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // mobile breakpoint
-
   return (
     <Box
       sx={{
         position: "relative",
         width: "100vw",
-        height: { xs: "60vh", sm: "100vh" }, // mobile 60% height, desktop full
+        height: { xs: "60vh", sm: "100vh" },
         overflow: "hidden",
       }}
     >
-      {/* Video for desktop */}
-      {!isMobile && (
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          controls={false}
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-          poster="/homepage/hero-poster.webp"
-        >
-          <source src="/movie1.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      )}
+      {/* Mobile image — visible only on xs/sm */}
+      <Box
+        component="img"
+        src="/homepage/mobile-hero.jpeg"
+        alt="Hero Mobile"
+        sx={{
+          display: { xs: "block", md: "none" },
+          width: "100%",
+          height: "60vh",
+          objectFit: "cover",
+        }}
+      />
 
-      {/* Image for mobile */}
-      {isMobile && (
-        <Box
-          component="img"
-          src="/homepage/mobile-hero.webp"
-          alt="Hero Mobile"
-          sx={{
-            width: "100%",
-            height: "60vh", // control the length of the photo on mobile
-            objectFit: "cover",
-          }}
-        />
-      )}
+      {/* Desktop video — visible only on md+ */}
+      <Box
+        component="video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster="/homepage/mobile-hero.jpeg"
+        sx={{
+          display: { xs: "none", md: "block" },
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+        }}
+      >
+        <source src="/movie1.mp4" type="video/mp4" />
+      </Box>
 
-      {/* Overlay Content */}
+      {/* Overlay */}
       <Box
         sx={{
           position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
+          inset: 0,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           color: "#fff",
           textAlign: "center",
-          background: "rgba(0, 0, 0, 0.3)", // optional dark overlay
+          background: "rgba(0, 0, 0, 0.3)",
           px: 2,
         }}
-      >
-        {/* Add your text/buttons here */}
-      </Box>
+      />
     </Box>
   );
 }

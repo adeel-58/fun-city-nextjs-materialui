@@ -5,10 +5,10 @@ export default function HeroSection() {
     return (
         <Box
             sx={{
-                height: "120vh", // full viewport height
+                height: { xs: "50vh", md: "120vh" }, // mobile 60vh, desktop unchanged
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "flex-start", // align text to the left
+                justifyContent: "flex-start",
                 backgroundImage: "url('/pyramid/hero-background.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -19,17 +19,26 @@ export default function HeroSection() {
             <Typography
                 variant="h1"
                 sx={{
-                    fontFamily: 'Lobster',
-                    fontWeight: 500, // regular
-                    fontSize: "60px",
+                    display: { xs: "none", md: "block" },
+                    fontFamily: "Lobster",
+                    fontWeight: 500,
+                    fontSize: { xs: "1.8rem", md: "60px" }, // mobile + desktop
                     color: "white",
                     textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
-                    ml:{lg:10},
+                    ml: { lg: 10 },
                 }}
             >
-              <span style={{ fontWeight: 300, fontFamily:'poppins', fontSize:"40px" }}>Winternächte</span>,<br/> Perfekte Weine
+                <span
+                    style={{
+                        fontWeight: 300,
+                        fontFamily: "poppins",
+                        fontSize: "40px",
+                    }}
+                >
+                    Winternächte
+                </span>
+                ,<br /> Perfekte Weine
             </Typography>
-            
         </Box>
     );
 }
