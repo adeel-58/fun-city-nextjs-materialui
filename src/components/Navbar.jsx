@@ -31,14 +31,14 @@ export default function Navbar() {
   const navLinks = [
     { label: "Shop 1", href: "/shop1" },
     { label: "Shop 2", href: "/shop2" },
-    { label: "Piramide", href: "/pyramid" },
+    { label: "Pyramide", href: "/pyramid" },
   ];
   const menuLinks = [
     { label: "Shop 1", href: "/shop1" },
     { label: "Shop 2", href: "/shop2" },
-    { label: "Piramide", href: "/pyramid" },
-    { label: "About Us", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "Pyramide", href: "/pyramid" },
+    { label: "Über uns", href: "/about" },
+    { label: "Kontakt", href: "/contact" },
   ];
   return (
     <>
@@ -54,7 +54,7 @@ export default function Navbar() {
           sx={{
             justifyContent: "space-between",
             minHeight: { xs: "70px", md: "100px" },
-            px: { xs: 2, md: 8 },
+            px: { xs: 2, md: 14 },
           }}
         >
           {/* Left - Logo */}

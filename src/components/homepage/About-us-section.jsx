@@ -2,6 +2,7 @@
 import { Box, Typography, Container, Button } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 export default function AboutUsSection() {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
@@ -74,12 +75,12 @@ export default function AboutUsSection() {
           <Box sx={{ mb: 5, mt: 1, pt: 0 }}>
             <Typography
               sx={{
-                fontSize: "30px",
-                fontWeight: "regular",
+                fontSize: "1.8rem",
+                fontWeight: "700",
                 textAlign: "center",
                 color: "white",
                 lineHeight: 1.2,
-                fontFamily: "lobster",
+                fontFamily: "poppins",
               }}
             >
               Greif dein Glück!
@@ -98,7 +99,7 @@ export default function AboutUsSection() {
             }}
           >
             <Image
-              src="/homepage/team-photo-mobile.png"
+              src="/homepage/team-photo-mobile.webp"
               alt="Team"
               width={350}
               height={200}
@@ -146,6 +147,8 @@ export default function AboutUsSection() {
 
           {/* Button */}
           <Button
+            component={Link}
+            href="/shop1"
             variant="contained"
             sx={{
               bgcolor: "#5C026B",
@@ -273,7 +276,8 @@ export default function AboutUsSection() {
               height={380}
               style={{
                 position: "absolute",
-                bottom: -60,
+                bottom: -63,
+                left:28,
                 objectFit: "cover",
                 borderRadius: "12px",
 
@@ -284,12 +288,12 @@ export default function AboutUsSection() {
             <Image
               src="/homepage/coins.webp"
               alt="Coins"
-              width={330}
-              height={330}
+              width={230}
+              height={230}
               style={{
                 position: "absolute",
-                bottom: -230,
-                right: -170,
+                bottom: -150,
+                right: -150,
                 objectFit: "contain",
                 zIndex: 2,
               }}
@@ -302,7 +306,10 @@ export default function AboutUsSection() {
             textAlign="left"
             sx={{ mt: 13 }}
           >
+
             <Button
+              component={Link}
+              href="/shop1"
               variant="contained"
               sx={{
                 position: "relative",
@@ -310,27 +317,24 @@ export default function AboutUsSection() {
                 color: "white",
                 fontWeight: "bold",
                 py: 3,
-                ml: -15,
                 borderRadius: "0 40px 40px 0",
                 textTransform: "none",
                 overflow: "hidden",
                 zIndex: 1,
 
-                // ✅ Responsive width
                 width: {
-                  xs: "85%",     // mobile
-                  sm: "65%",     // small tablets
-                  md: "320px",   // normal desktop
-                  lg: "350px",   // large desktop
-                  xl: "520px",   // 1920px+
-                },
-                ml: {
-                  // normal desktop
-                  lg: -15,   // large desktop
-                  xl: -35,   // 1920px+
+                  xs: "85%",
+                  sm: "65%",
+                  md: "320px",
+                  lg: "350px",
+                  xl: "520px",
                 },
 
-                // Remove fixed px padding for width control
+                ml: {
+                  lg: -15,
+                  xl: -35,
+                },
+
                 px: 4,
 
                 transform: isButtonVisible

@@ -28,7 +28,7 @@ export default function AboutUsSection() {
         }}
       >
         {/* 1. Heading */}
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3, pr: 28, fontSize: "25px" }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3, pr: 0, fontSize: "25px", textAlign:"center" }}>
           Über uns
         </Typography>
 
@@ -43,7 +43,7 @@ export default function AboutUsSection() {
           }}
         >
           <Image
-            src="/shop2/about-us.png"
+            src="/shop2/about-us.webp"
             alt="Arcade Machine"
             width={600}
             height={400}
@@ -80,10 +80,10 @@ export default function AboutUsSection() {
       </Box>
 
       {/* ── DESKTOP LAYOUT (original) ── */}
-      <Box sx={{ display: { xs: "none", md: "block" } }}>
+      <Box sx={{ display: { xs: "none", md: "block" }, px:8 }}>
         {/* Heading + Line */}
         <Box sx={{ mb: 6, ml: 2 }}>
-          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 }}>
+          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 , textAlign:"center"}}>
             Über uns
           </Typography>
          <Box
@@ -127,7 +127,7 @@ export default function AboutUsSection() {
           {/* Right - Image */}
           <Box sx={{ flex: 1, maxWidth: 600, mx: "auto", textAlign: "center", mr: 3, mt: 1 }}>
             <Image
-              src="/shop2/about-us.png"
+              src="/shop2/about-us.webp"
               alt="Arcade Machine"
               width={600}
               height={400}

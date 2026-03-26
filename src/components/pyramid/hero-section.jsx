@@ -9,7 +9,7 @@ export default function HeroSection() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "flex-start",
-                backgroundImage: "url('/pyramid/hero-background.png')",
+                backgroundImage: "url('/pyramid/hero-background.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

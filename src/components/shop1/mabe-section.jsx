@@ -26,7 +26,7 @@ export default function MaßeSection() {
         }}
       >
         {/* 1. Heading */}
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 5, mt:8, px: 2 }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 5, mt:8, px: 2 ,fontSize:"1.8rem"}}>
           Maße
         </Typography>
 
@@ -44,7 +44,7 @@ export default function MaßeSection() {
         {/* 3. Dimension image — with left/right padding */}
         <Box sx={{ width: "100%", px: 4, mb: 5 }}>
           <Image
-            src="/shop1/dimension-img.png"
+            src="/shop1/dimension-img.webp"
             alt="Dimension Illustration"
             width={400}
             height={300}
@@ -67,7 +67,7 @@ export default function MaßeSection() {
       </Box>
 
       {/* ── DESKTOP LAYOUT (original) ── */}
-      <Box sx={{ display: { xs: "none", md: "block" } }}>
+      <Box sx={{ display: { xs: "none", md: "block" }, px:8 }}>
         {/* Heading */}
         <Box textAlign="center" mb={3}>
           <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3 }}>
@@ -96,9 +96,9 @@ export default function MaßeSection() {
           }}
         >
           {/* Left Image */}
-          <Box sx={{ flex: "0 1 55%", maxWidth: 800, mx: "auto", ml: 2 }}>
+          <Box sx={{ flex: "0 1 55%", maxWidth: 600, mx: "auto", ml: 6 }}>
             <Image
-              src="/shop1/dimension-img.png"
+              src="/shop1/dimension-img.webp"
               alt="Dimension Illustration"
               width={400}
               height={300}
@@ -120,11 +120,11 @@ export default function MaßeSection() {
               alt="Hauptshop"
               width={400}
               height={300}
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "100%", height: "auto",borderRadius:"30px" }}
             />
             <Typography
               variant="body2"
-              sx={{ mt: 5, opacity: 1, fontStyle: "normal" }}
+              sx={{ mt: 2, opacity: 1, fontStyle: "normal", fontSize:"17px", lineHeight:1.7 }}
             >
               Technische Daten: Breite - 12,00m<br />Tiefe - 5,70m open
             </Typography>

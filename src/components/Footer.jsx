@@ -17,26 +17,29 @@ export default function Footer() {
       }}
     >
       {/* Background coin image */}
-      <Image
-        src="/footer-coin.webp"
-        alt="Background Coins"
-        width={800}
-        height={800}
-        style={{
-          position: "absolute",
-          bottom: -250,
-          right: 80,
-          opacity: 1,
-          objectFit: "contain",
-          zIndex: 1,
-        }}
-      />
+      <Box
+  sx={{
+    position: "absolute",
+    bottom: { xs: -120, md: -250 },   // 👈 mobile vs desktop
+    right: { xs: -70, md: 80 },       // 👈 mobile vs desktop
+    width: { xs: 500, md: 800 },     // 👈 smaller on mobile
+    height: { xs: 400, md: 800 },    // 👈 smaller on mobile
+    zIndex: 1,
+  }}
+>
+  <Image
+    src="/footer-coin.webp"
+    alt="Background Coins"
+    fill
+    style={{ objectFit: "contain" }}
+  />
+</Box>
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1, mt:-5 }}>
-        <Grid container spacing={10}>
+        <Grid container spacing={7}>
           {/* Left column - Logo and description */}
           <Grid item xs={12} md={3}>
-            <Box sx={{ mb: 3 }}>
+            <Box sx={{ mb: 3 , mt:-5 }}>
               <Image
                 src="/logo.webp" // Replace with your Fun Card logo
                 alt="Fun Card Logo"
@@ -56,14 +59,12 @@ export default function Footer() {
                 maxWidth: "450px",
               }}
             >
-              Lorem ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
+              Tauche ein in unsere einzigartigen Shops, entdecke<br/> aufregende Automaten und sichere dir tolle Preise. Für Kinder, Jugendliche und alle Spielbegeisterten –<br/> <strong style={{ fontSize: "17px" }}>Unterhaltung garantiert!</strong>
             </Typography>
           </Grid>
 
           {/* About Us column */}
-          <Grid item xs={12} sm={6} md={2} sx={{ ml: { xs: 6, md: 0 } }}>
+          <Grid item xs={12} sm={6} md={2} sx={{ ml: { xs: 3, md: 0 } }}>
             <Typography
               variant="h6"
               sx={{
@@ -77,13 +78,13 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Familien Unterhaltung
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Automaten Action
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Echte Gewinne
               </Typography>
             </Box>
           </Grid>
@@ -102,16 +103,16 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                info@funcity.de
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                +49 123 456 789
               </Typography>
             </Box>
           </Grid>
 
           {/* Services column */}
-          <Grid item xs={12} sm={6} md={2}  sx={{ ml: { xs: 6, md: 0 } }}>
+          <Grid item xs={12} sm={6} md={2}  sx={{ ml: { xs: 3, md: 0 } }}>
             <Typography
               variant="h6"
               sx={{
@@ -124,22 +125,20 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Shop 1
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Shop 2
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Pyramide
               </Typography>
-              <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
-              </Typography>
+              
             </Box>
           </Grid>
 
           {/* Help Center column */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={6} md={3} sx={{ ml: { xs: 9, md: 0 } }}>
             <Typography
               variant="h6"
               sx={{
@@ -152,7 +151,7 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                +49 123 456 789
               </Typography>
             </Box>
           </Grid>

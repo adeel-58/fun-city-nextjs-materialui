@@ -30,7 +30,7 @@ export default function Contactsection() {
         bgcolor: "#2C3D29",
         color: "white",
         pt: 0,
-        pb: 10,
+        pb: 4,
         overflow: "hidden",
         minHeight: "100vh",
       }}
@@ -40,15 +40,15 @@ export default function Contactsection() {
       <Box
         sx={{
           display: { xs: "block", md: "none" },
-          pt: 8,
-          pb: 12,
+          pt: 4,
+          pb: 6,
           position: "relative",
           overflow: "hidden",
         }}
       >
         {/* Overlay images */}
         <Image
-          src="/pyramid/contact-image1.png"
+          src="/pyramid/contact-image1.webp"
           alt="overlay"
           width={450}
           height={450}
@@ -62,7 +62,7 @@ export default function Contactsection() {
           }}
         />
         <Image
-          src="/pyramid/contact-image2.png"
+          src="/pyramid/contact-image2.webp"
           alt="overlay"
           width={350}
           height={350}
@@ -73,6 +73,7 @@ export default function Contactsection() {
             transform: "translateX(-50%)",
             zIndex: 0,
             opacity: 1,
+             display: "none",
           }}
         />
 
@@ -90,14 +91,14 @@ export default function Contactsection() {
           <Typography
             variant="h2"
             sx={{
-              fontWeight: "regular",
+              fontWeight: 700,
               fontFamily: "lobster",
               fontSize: "1.8rem",
               textAlign: "center",
               mb: 9,
             }}
           >
-            Contact
+            Kontakt
           </Typography>
 
           {/* PHONE IMAGE */}
@@ -111,11 +112,11 @@ export default function Contactsection() {
               alignItems: "center",
               justifyContent: "center",
               position: "relative",
-              mb: 15,
+              mb: 8,
             }}
           >
             <Image
-              src="/pyramid/contact-us.png"
+              src="/pyramid/contact-us.webp"
               alt="Contact Phone"
               width={260}
               height={260}
@@ -123,12 +124,12 @@ export default function Contactsection() {
             />
 
             {/* Decoration */}
-            <Box sx={{ position: "absolute", bottom: -65, right: -95 }}>
+            <Box sx={{ position: "absolute", bottom: -85, right: -125 }}>
               <Image
-                src="/pyramid/contact-mug.png"
+                src="/pyramid/contact-mug.webp"
                 alt="Decoration"
-                width={120}
-                height={120}
+                width={180}
+                height={180}
               />
             </Box>
           </Box>
@@ -266,10 +267,10 @@ export default function Contactsection() {
                 mb: 3.3,
                 fontFamily: "lobster",
                 mt: 10,
-                fontSize: { xs: "2.5rem", md: "37px" },
+                fontSize: { xs: "2.5rem", md: "2.2rem" },
               }}
             >
-              Contact
+              Kontakt
             </Typography>
             <Box
               sx={{
@@ -309,7 +310,7 @@ export default function Contactsection() {
                 }}
               >
                 <Image
-                  src="/pyramid/contact-us.png"
+                  src="/pyramid/contact-us.webp"
                   alt="Contact Phone"
                   width={500}
                   height={500}
@@ -318,14 +319,14 @@ export default function Contactsection() {
               </Box>
 
               <Image
-                src="/pyramid/contact-image1.png"
+                src="/pyramid/contact-image1.webp"
                 alt="Decoration"
                 width={150}
                 height={150}
                 style={{ position: "absolute", bottom: 340, right: 50, objectFit: "contain", zIndex: 2 }}
               />
               <Image
-                src="/pyramid/contact-mug.png"
+                src="/pyramid/contact-mug.webp"
                 alt="Decoration"
                 width={350}
                 height={350}
@@ -336,7 +337,7 @@ export default function Contactsection() {
             {/* Right side - form */}
             <Box sx={{ flex: 1, maxWidth: "550px" }}>
               <form onSubmit={handleSubmit}>
-                <Box sx={{ display: "flex", mt: -4, gap: 5, mb: 5, flexDirection: { xs: "column", sm: "row" } }}>
+                <Box sx={{ display: "flex", mt: -11, gap: 5, mb: 5, flexDirection: { xs: "column", sm: "row" } }}>
                   <TextField
                     fullWidth name="firstName" label="VORNAME" size="small"
                     value={formData.firstName} onChange={handleInputChange}
@@ -374,10 +375,10 @@ export default function Contactsection() {
                   </Button>
                 </Box>
 
-                <Image src="/pyramid/contact-image2.png" alt="Decoration" width={130} height={130}
-                  style={{ position: "absolute", bottom: -110, right: 530, objectFit: "contain", zIndex: 2 }} />
-                <Image src="/pyramid/contact-image3.png" alt="Decoration" width={130} height={130}
-                  style={{ position: "absolute", bottom: -180, right: 200, objectFit: "contain", zIndex: 2 }} />
+                <Image src="/pyramid/contact-image2.webp" alt="Decoration" width={130} height={130}
+                  style={{ position: "absolute", bottom: -130, right: 530, objectFit: "contain", zIndex: 2 }} />
+                <Image src="/pyramid/contact-image3.webp" alt="Decoration" width={130} height={130}
+                  style={{ position: "absolute", bottom: -150, right: 200, objectFit: "contain", zIndex: 2 }} />
               </form>
             </Box>
           </Box>

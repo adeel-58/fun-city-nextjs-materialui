@@ -25,11 +25,12 @@ export default function Shop1() {
         sx={{
           position: "absolute",
          // top: "1300px", // 👈 adjust so it's exactly between the 2 sections
-          top: {xs: "670px", md: "1300px" }, // mobile | tablet | desktop
-         left: {xs: -15, md: -30 }, // mobile | tablet | desktop
+          top: {xs: "670px", md: "1250px",xl:"1330px" }, // mobile | tablet | desktop
+         left: {xs: -15, md: -10 }, // mobile | tablet | desktop
          // left:-30, // 👈 adjust horizontal position
           zIndex: 20, // higher than sections
-          width: { xs: 100, md: 250 },
+          width: { xs: 100, md: 200 },
+          opacity:1111,
         }}
       >
         <Image

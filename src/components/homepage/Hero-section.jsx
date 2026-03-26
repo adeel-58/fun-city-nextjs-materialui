@@ -15,7 +15,7 @@ export default function Herosection() {
       {/* Mobile image — visible only on xs/sm */}
       <Box
         component="img"
-        src="/homepage/mobile-hero.jpeg"
+        src="/homepage/mobile-hero.webp"
         alt="Hero Mobile"
         sx={{
           display: { xs: "block", md: "none" },
@@ -33,7 +33,7 @@ export default function Herosection() {
         muted
         playsInline
         preload="auto"
-        poster="/homepage/mobile-hero.jpeg"
+        poster="/homepage/mobile-hero.webp"
         sx={{
           display: { xs: "none", md: "block" },
           width: "100%",

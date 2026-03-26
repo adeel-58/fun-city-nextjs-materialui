@@ -6,30 +6,30 @@ export default function HowItWorksSection() {
   const steps = [
     {
       title: "Münze einwerfen",
-      text: "Wirf eine oder mehrere Münzen in den Automaten.",
-      coin: "/pyramid/small-coin-1.png",
+      text: "Bezahle zuerst dein Getränk und die Tassenpfand.",
+      coin: "/pyramid/small-coin-1.webp",
     },
     {
       title: "Spielen & Punkte sammeln",
-      text: "Spiele das Spiel und sammele automatisch verdiente Punkte.",
-      coin: "/pyramid/small-coin-2.png",
+      text: "Genieße dein heißes Getränk in gemütlicher Atmosphäre.",
+      coin: "/pyramid/small-coin-2.webp",
     },
     {
       title: "Punkte speichern",
-      text: "Sichere Punkte in deinem Spieler-Konto (gespeichert durch die App).",
-      coin: "/pyramid/small-coin-2.png",
+      text: "Bleibe drinnen oder am Feuer in einem warmen, festlichen Ambiente.",
+      coin: "/pyramid/small-coin-2.webp",
     },
     {
       title: "Prämien auswählen",
-      text: "Tausche deine gespeicherten Punkte gegen großartige Prämien deiner Wahl.",
-      coin: "/pyramid/small-coin-3.png",
+      text: "Gib die Tasse zurück und erhalte dein Pfand zurück.",
+      coin: "/pyramid/small-coin-3.webp",
     },
   ];
 
   const images = [
-    "/pyramid/image4-pyramid.png",
-    "/pyramid/image2-pyramid.png",
-    "/pyramid/image3-pyramid.png",
+    "/pyramid/image4-pyramid.webp",
+    "/pyramid/image2-pyramid.webp",
+    "/pyramid/image3-pyramid.webp",
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function HowItWorksSection() {
         position: "relative",
         bgcolor: "#2C3D29",
         color: "white",
-        pt: { xs: 8, md: 23 },
+        pt: { xs: 8, md: 15 },
         pb: { xs: 10, md: 18 },
         px: { xs: 0, md: 8 },
       }}
@@ -48,14 +48,14 @@ export default function HowItWorksSection() {
         sx={{
           display: { xs: "none", md: "block" },
           position: "absolute",
-          top: -20,
+          top: -40,
           right: 0,
           zIndex: 0,
           pointerEvents: "none",
         }}
       >
         <Image
-          src="/pyramid/lightings.png"
+          src="/pyramid/lightings.webp"
           alt="Lightning"
           width={300}
           height={300}
@@ -70,7 +70,7 @@ export default function HowItWorksSection() {
         {/* 1. Heading */}
         <Typography
           variant="h4"
-          sx={{ fontSize: "1.8rem", fontWeight: "bold", textAlign: "center", mb: 5, px: 2 }}
+          sx={{ fontSize: "1.8rem", fontWeight: "bold", textAlign: "center", mb: 5, px: 2 ,fontFamily:"lobster"}}
         >
           Wie es funktioniert ?
         </Typography>
@@ -166,7 +166,7 @@ export default function HowItWorksSection() {
 
         {/* Heading */}
         <Box textAlign="center" mb={4}>
-          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 }}>
+          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 ,fontFamily:"lobster", fontSize:"2.2rem"}}>
             Wie es funktioniert ?
           </Typography>
           <Box

@@ -100,7 +100,7 @@ export default function Contactsection() {
           <Typography
             variant="h2"
             sx={{
-              fontWeight: "bold",
+              fontWeight: 600,
               fontFamily: "Poppins",
               fontSize: "1.8rem",
               textAlign: "center",
@@ -345,29 +345,21 @@ export default function Contactsection() {
 
         <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
           {/* Contact heading with underline */}
-          <Box sx={{ textAlign: "center", mb: 6 }}>
+          <Box sx={{ textAlign: "center", mb: 9 }}>
             <Typography
               variant="h2"
               sx={{
-                fontWeight: "bold",
+                fontWeight: 600,
                 mb: 3.3,
                 fontFamily: "Poppins",
-                mt: 10,
-                fontSize: { xs: "2.5rem", md: "37px" },
+                mt: 2,
+                fontSize: { xs: "2.5rem", md: "2.2rem" },
               }}
             >
-              Contact
+              Kontakt
             </Typography>
             {/* Gradient underline */}
-            <Box
-              sx={{
-                width: "100%",
-                height: "6px",
-                background: "linear-gradient(90deg, #666666 0%, #666666 75%, #690580 75%, #690580 100%)",
-                mx: "auto",
-                borderRadius: "2px",
-              }}
-            />
+            
           </Box>
 
           {/* Main content container */}
@@ -377,7 +369,7 @@ export default function Contactsection() {
               gap: 8,
               alignItems: "flex-start",
               flexDirection: { xs: "column", md: "row" },
-              mt: 18,
+              mt: 26,
               mb: 20,
             }}
           >
@@ -432,7 +424,7 @@ export default function Contactsection() {
                 <Box
                   sx={{
                     display: "flex",
-                    mt: -4,
+                    mt: -10,
                     gap: 5,
                     mb: 5,
                     flexDirection: { xs: "column", sm: "row" },

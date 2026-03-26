@@ -2,7 +2,7 @@
 import { Box, Typography, Container, Button } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
+import Link from "next/link";
 export default function Shop3section() {
     const [isButtonVisible, setIsButtonVisible] = useState(false);
     const buttonRef = useRef(null);
@@ -123,6 +123,8 @@ export default function Shop3section() {
 
                     <Box textAlign="center">
                         <Button
+                            component={Link}
+                            href="/pyramid"
                             variant="contained"
                             sx={{
                                 bgcolor: "#5C026B",
@@ -169,7 +171,7 @@ export default function Shop3section() {
                             variant="h3"
                             sx={{
                                 fontWeight: "bold",
-                                mt: 10,
+                                mt: -1,
                                 mb: 5,
                                 fontSize: { xs: "2rem", md: "2.5rem" },
                             }}
@@ -182,7 +184,7 @@ export default function Shop3section() {
                             sx={{
                                 fontSize: "15px",
                                 lineHeight: 1.4,
-                                mb: 10,
+                                mb: 21,
                                 opacity: 0.9,
                             }}
                         >
@@ -195,13 +197,15 @@ export default function Shop3section() {
 
                         <Box ref={buttonRef} textAlign="left">
                             <Button
+                                component={Link}
+                                href="/pyramid"
                                 variant="contained"
                                 sx={{
                                     position: "relative",
                                     bgcolor: "#5C026B",
                                     color: "white",
                                     fontWeight: "bold",
-                                    px: 26,
+                                    px: 23,
                                     py: 3,
                                     borderRadius: "0 40px 40px 0",
                                     textTransform: "none",
@@ -210,10 +214,10 @@ export default function Shop3section() {
                                     ml: -15,
                                     transform: isButtonVisible ? "translateX(0)" : "translateX(-100%)",
                                     transition: "transform 0.6s ease-out",
-                                    
+
                                     ml: {
                                         // normal desktop
-                                        lg: -15,   // large desktop
+                                        lg: -12,   // large desktop
                                         xl: -20,   // 1920px+
                                     },
                                 }}
@@ -229,7 +233,7 @@ export default function Shop3section() {
                             flex: 1.5,
                             pt: 4,
                             pb: 4,
-                            mr: -15,
+                            mr: -30,
                             position: "relative",
                         }}
                     >

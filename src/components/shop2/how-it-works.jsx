@@ -22,7 +22,7 @@ export default function HowItWorksSection() {
     },
   ];
 
-  const images = ["/shop2/img1.png", "/shop2/img2.png", "/shop2/img3.png"];
+  const images = ["/shop2/img1.webp", "/shop2/img2.webp", "/shop2/img3.webp"];
 
   return (
     <Box
@@ -49,7 +49,7 @@ export default function HowItWorksSection() {
         }}
       >
         <Image
-          src="/shop2/overlay1-shop2.png"
+          src="/shop2/overlay1-shop2.webp"
           alt="Glow Overlay"
           width={800}
           height={400}
@@ -163,7 +163,7 @@ export default function HowItWorksSection() {
 
         {/* Heading */}
         <Box textAlign="center" mb={4}>
-          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 }}>
+          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 ,fontSize:"2.2rem"}}>
             Wie es funktioniert ?
           </Typography>
           <Box

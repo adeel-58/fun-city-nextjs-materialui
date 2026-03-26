@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function PhotoGallerySection() {
   const galleryImages = [
-    "/shop2/img4.png",
-    "/shop2/img5.png",
-    "/shop2/img6.png",
-    "/shop2/img7.png",
+    "/shop2/img4.webp",
+    "/shop2/img5.webp",
+    "/shop2/img6.webp",
+    "/shop2/img7.webp",
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function PhotoGallerySection() {
           left: "20%",
           transform: "translate(-50%, -50%)",
           zIndex: 1,
-          width: { md: 640 },
+          width: { md: 540 },
           height: "auto",
           opacity: 1,
           pointerEvents: "none",
@@ -93,23 +93,23 @@ export default function PhotoGallerySection() {
         </Box>
 
         {/* ── DESKTOP LAYOUT (original) ── */}
-        <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <Box sx={{ display: { xs: "none", md: "block" }, px: 8 }}>
 
           {/* Heading */}
           <Box mb={4}>
             <Typography
               variant="h4"
-              sx={{ fontWeight: "bold", mb: 4, ml: 2, fontSize: { md: "2.5rem" } }}
+              sx={{ fontWeight: "bold", mb: 4, ml: 2, fontSize: { md: "2.2rem" }, textAlign: "center" }}
             >
               Fotogalerie
             </Typography>
             <Box
               sx={{
-                  width: "100%",
-    height: "6px",
-    background: "linear-gradient(90deg, #666666 0%, #666666 50%, #690580 50%, #690580 75%, #666666 75%, #666666 100%)",
-    mx: "auto",
-    borderRadius: "2px",
+                width: "100%",
+                height: "6px",
+                background: "linear-gradient(90deg, #666666 0%, #666666 50%, #690580 50%, #690580 75%, #666666 75%, #666666 100%)",
+                mx: "auto",
+                borderRadius: "2px",
                 mb: 8,
               }}
             />
@@ -122,7 +122,7 @@ export default function PhotoGallerySection() {
             <Box
               sx={{
                 position: "absolute",
-                left: 0,
+                left: 12,
                 top: 0,
                 borderRadius: "20px",
                 overflow: "hidden",
@@ -132,7 +132,7 @@ export default function PhotoGallerySection() {
               }}
             >
               <Image
-                src="/shop2/img4.png"
+                src="/shop2/img4.webp"
                 alt="Gallery Image 1"
                 width={400}
                 height={550}
@@ -143,7 +143,7 @@ export default function PhotoGallerySection() {
             {/* Right Side Images Container */}
             <Box
               sx={{
-                marginLeft: "50%",
+                marginLeft: { xl: "46%", lg: "48%" },
                 display: "flex",
                 flexDirection: "column",
                 gap: 3.5,
@@ -155,7 +155,7 @@ export default function PhotoGallerySection() {
                   sx={{ borderRadius: "20px", overflow: "hidden", width: "300px", height: "430px" }}
                 >
                   <Image
-                    src="/shop2/img5.png"
+                    src="/shop2/img5.webp"
                     alt="Gallery Image 2"
                     width={250}
                     height={200}
@@ -166,7 +166,7 @@ export default function PhotoGallerySection() {
                   sx={{ borderRadius: "20px", overflow: "hidden", width: "300px", height: "430px" }}
                 >
                   <Image
-                    src="/shop2/img6.png"
+                    src="/shop2/img6.webp"
                     alt="Gallery Image 3"
                     width={250}
                     height={200}
@@ -177,10 +177,10 @@ export default function PhotoGallerySection() {
 
               {/* Bottom Right — 1 wide image */}
               <Box
-                sx={{ borderRadius: "20px", overflow: "hidden", width: "600px", height: "400px" }}
+                sx={{ borderRadius: "20px", overflow: "hidden", width: {lg:"600px",xl:"640px"}, height: "400px" }}
               >
                 <Image
-                  src="/shop2/img7.png"
+                  src="/shop2/img7.webp"
                   alt="Gallery Image 4"
                   width={502}
                   height={320}

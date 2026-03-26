@@ -45,7 +45,7 @@ export default function MaßeSection() {
                 {/* 3. Dimension image — with left/right padding */}
                 <Box sx={{ width: "100%", px: 4, mb: 5 }}>
                     <Image
-                        src="/shop2/dimension-shop2.png"
+                        src="/shop2/dimension-shop2.webp"
                         alt="Dimension Illustration"
                         width={400}
                         height={300}
@@ -68,7 +68,7 @@ export default function MaßeSection() {
             </Box>
 
             {/* ── DESKTOP LAYOUT (original) ── */}
-            <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <Box sx={{ display: { xs: "none", md: "block" }, px:8 }}>
                 {/* Heading */}
                 <Box textAlign="center" mb={3}>
                     <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3 }}>
@@ -97,9 +97,9 @@ export default function MaßeSection() {
                     }}
                 >
                     {/* Left Image */}
-                    <Box sx={{ flex: "0 1 55%", maxWidth: 600, mx: "auto", ml: 2 }}>
+                    <Box sx={{ flex: "0 1 55%", maxWidth: 500, mx: "auto", ml: 8 }}>
                         <Image
-                            src="/shop2/dimension-shop2.png"
+                            src="/shop2/dimension-shop2.webp"
                             alt="Dimension Illustration"
                             width={400}
                             height={300}
@@ -121,11 +121,11 @@ export default function MaßeSection() {
                             alt="Hauptshop"
                             width={400}
                             height={300}
-                            style={{ width: "100%", height: "auto" }}
+                            style={{ width: "100%", height: "auto",borderRadius:"30px" }}
                         />
                         <Typography
                             variant="body2"
-                            sx={{ mt: 5, opacity: 1, fontStyle: "normal" }}
+                            sx={{ mt: 2, opacity: 1, fontStyle: "normal", fontSize:"17px", lineHeight:1.7 }}
                         >
                             Technische Daten: Breite - 6,00m<br />Tiefe - 5,00m<br />Strom - 220Volt
                         </Typography>

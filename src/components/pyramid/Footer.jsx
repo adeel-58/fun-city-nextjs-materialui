@@ -13,11 +13,12 @@ export default function Footer() {
         pt: 14,
         pb: 16,
         overflow: "hidden",
+       // zIndex:-1,
       }}
     >
       {/* Background coin image */}
       <Image
-        src="/pyramid/footer.png"
+        src="/pyramid/footer.webp"
         alt="Background Coins"
         width={600}
         height={600}
@@ -25,19 +26,19 @@ export default function Footer() {
           position: "absolute",
           bottom: -250,
           right: 20,
-          opacity: 1,
+          opacity: 0.6,
           objectFit: "contain",
           zIndex: 1,
         }}
       />
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1, mt: -5 }}>
-        <Grid container spacing={10}>
+        <Grid container spacing={7}>
           {/* Left column - Logo and description */}
           <Grid item xs={12} md={3}>
-            <Box sx={{ mb: 3 }}>
+            <Box sx={{ mb: 3 , mt:-5}}>
               <Image
-                src="/pyramid/pyramid-logo.png" // Replace with your Fun Card logo
+                src="/pyramid/pyramid-logo.webp" // Replace with your Fun Card logo
                 alt="Fun Card Logo"
                 width={180}
                 height={60}
@@ -55,9 +56,7 @@ export default function Footer() {
                 maxWidth: "450px",
               }}
             >
-              Lorem ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
+              Erlebe die Winterpyramide! Gemütlich drinnen zwischen festlicher Dekoration oder draußen am wärmenden Feuer – genieße heiße Schokolade, Glühwein und winterliche Leckereien in magischer Weihnachtsatmosphäre.
             </Typography>
           </Grid>
 
@@ -76,13 +75,13 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Wärme
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Freude
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Genuss
               </Typography>
             </Box>
           </Grid>
@@ -101,10 +100,10 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                info@funcity.de
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                +49 123 456 789
               </Typography>
             </Box>
           </Grid>
@@ -123,13 +122,15 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Shop 1
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                Shop 2
               </Typography>
-
-
+              <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
+                Pyramide
+              </Typography>
+              
             </Box>
           </Grid>
 
@@ -147,10 +148,7 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
-              </Typography>
-              <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                Lorem Ipsum
+                +49 123 456 789
               </Typography>
             </Box>
           </Grid>

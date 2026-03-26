@@ -12,13 +12,13 @@ const shops = [
       "Unsere innovativen Automaten ermöglichen es dir, mit jeder eingeworfenen Münze Punkte zu sammeln. Diese Punkte kannst du später gegen tolle Prämien eintauschen – ganz einfach und transparent. Ob allein oder mit Freunden: Unsere Automaten sorgen für Unterhaltung und echte Gewinnchancen.",
     accent: "#8E4EC4",
     bgColor: "#121214",
-    mainImage: "/shop1/shop-image-shop1.webp",
+    mainImage: "/homepage/team-photo.webp",
     images: [
-      "/shop1/image5-shop1.png",
+      "/shop1/image5-shop1.webp",
       "/shop1/image6-shop1.webp",
-      "/shop1/image7-shop1.webp",
+      "/about/shop1-4.webp",
     ],
-    dimensionImg: "/shop1/dimension-img.png",
+    dimensionImg: "/shop1/dimension-img.webp",
   },
   {
     id: "shop2",
@@ -27,32 +27,32 @@ const shops = [
     tagline: "Greif dein Glück!",
     description:
       "Tauche ein in Spielspaß und Spannung! Wirf eine Münze ein, bewege den Hebel und fang dein Kuscheltier. Jeder Versuch bringt Freude und die Chance auf einen plüschigen Gewinn.",
-    accent: "#C45E4E",
+    accent: "#ffe601",
     bgColor: "#4C1663",
-    mainImage: "/shop2/about-us.png",
+    mainImage: "/shop2/about-us.webp",
     images: [
-      "/shop2/img4.png",
-      "/shop2/img5.png",
-      "/shop2/img6.png",
+      "/shop2/img4.webp",
+      "/shop2/img5.webp",
+      "/shop2/img6.webp",
     ],
-    dimensionImg: "/shop2/dimension-shop2.png",
+    dimensionImg: "/shop2/dimension-shop2.webp",
   },
   {
     id: "pyramid",
     label: "PYRAMID",
     name: "Pyramid Shop",
-    tagline: "Wir bringen Spielspaß und Belohnung zusammen!",
+    tagline: "Tauche ein in die magische Winterpyramide!",
     description:
-      "Shop 2 ist der Ort, an dem Spielspaß auf süße Gewinne trifft. Mit nur einer Münze und etwas Glück steuerst du die Klaue und fangst bunte Plüschtiere. Spannung, Freude und ein kuscheliges Andenken bei jedem Versuch!",
+      "Erlebe die Winterpyramide! Gemütlich drinnen zwischen festlicher Dekoration oder draußen am wärmenden Feuer – genieße heiße Schokolade, Glühwein und winterliche Leckereien in magischer Weihnachtsatmosphäre.",
     accent: "#DF1232",
     bgColor: "#2C3D29",
-    mainImage: "/pyramid/about-us.png",
+    mainImage: "/pyramid/about-us.webp",
     images: [
-      "/pyramid/gallary-image1.png",
-      "/pyramid/gallary-image4.png",
-      "/pyramid/gallary-image3.png",
+      "/about/pyramid2.webp",
+      "/about/pyramid3.webp",
+      "/about/pyramid4.webp",
     ],
-    dimensionImg: "/shop1/dimension-img.png",
+    dimensionImg: "/shop1/dimension-img.webp",
   },
 ];
 
@@ -65,8 +65,8 @@ export default function AboutUsPage() {
         sx={{
           position: "relative",
           overflow: "hidden",
-          pt:15,
-          height: {xs:"30vh",md:"60vh"},
+          pt: 15,
+          height: { xs: "30vh", md: "60vh" },
           bgcolor: "#121214",
           display: "flex",
           alignItems: "center",
@@ -97,12 +97,13 @@ export default function AboutUsPage() {
               mx: "auto",
               lineHeight: 1.8,
               fontSize: { xs: "0.75rem", md: "1.15rem" },
+              fontFamily:"poppins",
             }}
           >
             Drei einzigartige Shops. Ein Ziel: Spielspaß, Spannung und echte Gewinne für jeden.
           </Typography>
 
-         
+
         </Container>
       </Box>
 
@@ -113,14 +114,14 @@ export default function AboutUsPage() {
           sx={{
             bgcolor: shop.bgColor,
             py: { xs: 8, md: 14 },
-           // borderTop: "1px solid rgba(255,255,255,0.05)",
+            // borderTop: "1px solid rgba(255,255,255,0.05)",
           }}
         >
           <Container maxWidth="lg">
             <Box
               sx={{
                 display: "flex",
-                flexDirection: { xs: "column", md: "row" },
+                flexDirection: { xs: "column", md: shop.id === "shop2" ? "row-reverse" : "row" },
                 alignItems: "center",
                 gap: { xs: 4, md: 8 },
               }}
@@ -136,6 +137,8 @@ export default function AboutUsPage() {
                     fontSize: "0.7rem",
                     display: "block",
                     mb: 1.5,
+                    mt:-4,
+                    fontFamily: "poppins",
                   }}
                 >
                   {shop.label}
@@ -146,7 +149,7 @@ export default function AboutUsPage() {
                   sx={{
                     fontWeight: 800,
                     fontSize: { xs: "1rem", md: "1.8rem" },
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "poppins, serif",
                     mb: 1.5,
                     lineHeight: 1.2,
                   }}
@@ -182,11 +185,12 @@ export default function AboutUsPage() {
                 {/* Dimension image */}
                 <Box
                   sx={{
+                    display: { xs: "none", sm: "block" },
                     mt: 4,
                     //borderRadius: "12px",
                     overflow: "hidden",
                     //border: `1px solid ${shop.accent}33`,
-                    maxWidth: "280px",
+                    maxWidth: "280px",mx: "auto",
                   }}
                 >
                   <Image
@@ -206,9 +210,9 @@ export default function AboutUsPage() {
                   sx={{
                     borderRadius: "20px",
                     overflow: "hidden",
-                    mb: 2,
+                    mb:{ xs: 1, md: 2 },
                     height: { xs: "240px", md: "360px" },
-                   // border: `1px solid ${shop.accent}33`,
+                    // border: `1px solid ${shop.accent}33`,
                     boxShadow: `0 20px 60px ${shop.accent}22`,
                     position: "relative",
                   }}
@@ -246,7 +250,8 @@ export default function AboutUsPage() {
                         borderRadius: "14px",
                         overflow: "hidden",
                         height: { xs: "85px", md: "120px" },
-                       // border: `1px solid ${shop.accent}22`,
+                        
+                        // border: `1px solid ${shop.accent}22`,
                         transition: "transform 0.2s, box-shadow 0.2s",
                         "&:hover": {
                           transform: "scale(1.04)",
@@ -272,7 +277,7 @@ export default function AboutUsPage() {
       ))}
 
       {/* ── BOTTOM CTA ── */}
-      
+
 
     </Box>
   );

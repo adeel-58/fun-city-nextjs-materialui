@@ -19,6 +19,7 @@ export default function AboutUsSection() {
       {/* Background Overlay */}
       <Box
         sx={{
+          display: { xs: "none", md: "block" },
           position: "absolute",
           top: { xs: "15%", md: "30%" },
           left: { xs: "75%", md: "50%" },
@@ -51,7 +52,7 @@ export default function AboutUsSection() {
         }}
       >
         {/* 1. Heading */}
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3, pr: 28, fontSize: "25px" }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3, pr: 0, fontSize: "1.8rem" , textAlign:"center"}}>
           Über uns
         </Typography>
 
@@ -106,10 +107,10 @@ export default function AboutUsSection() {
       </Box>
 
       {/* ── DESKTOP LAYOUT (original) ── */}
-      <Box sx={{ display: { xs: "none", md: "block" } }}>
+      <Box sx={{ display: { xs: "none", md: "block" },px:8 }}>
         {/* Heading + Full Width Line */}
-        <Box sx={{ position: "relative", zIndex: 10, mb: 4, ml: 2 }}>
-          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 }}>
+        <Box sx={{ position: "relative", zIndex: 10, mb: 4, ml: 2,  }}>
+          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 ,textAlign: "center"}}>
             Über uns
           </Typography>
           <Box
@@ -128,16 +129,16 @@ export default function AboutUsSection() {
           container
           spacing={6}
           alignItems="center"
-          sx={{ position: "relative", zIndex: 10, ml: 2 }}
+          sx={{ position: "relative", zIndex: 10, ml: 2  }}
         >
           {/* Left Side */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} sx={{mt:6}}>
             <Typography variant="h5" sx={{ fontWeight: "bold", mb: 5 }}>
-              Wir bringen Spielspaß und<br /> Belohnung zusammen!
+              Wir bringen Spielspaß und Belohnung <br /> zusammen!
             </Typography>
 
             <Typography variant="body1" sx={{ opacity: 0.9, mb: 4, fontSize: "15px" }}>
-              Unsere innovativen Automaten ermöglichen es dir{","} mit jeder<br /> eingeworfenen Münze Punkte zu sammeln. Diese Punkte kannst du später<br /> gegen tolle Prämien eintauschen – ganz einfach und transparent. Ob<br /> allein oder mit Freunden: Unsere Automaten sorgen für Unterhaltung und <br />echte Gewinnchancen.
+              Unsere innovativen Automaten ermöglichen es dir{","} mit jeder eingeworfenen Münze Punkte <br />zu sammeln. Diese Punkte kannst du später gegen tolle Prämien eintauschen –<br /> ganz einfach und transparent. Oballein oder mit Freunden: Unsere Automaten<br /> sorgen für Unterhaltung und echte Gewinnchancen.
             </Typography>
 
             <Typography variant="subtitle1" sx={{ fontWeight: "bold", fontSize: "15px" }}>
@@ -151,7 +152,7 @@ export default function AboutUsSection() {
               sx={{
                 position: "absolute",
                 top: { md: -30 },
-                right: { md: -760 },
+                right: { md: -710,xl:-790 },
                 zIndex: 50,
                 width: { md: "760px" },
               }}

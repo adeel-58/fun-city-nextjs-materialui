@@ -15,6 +15,7 @@ export default function MaßeSection() {
         color: "white",
         py: { xs: 0, md: 10 },
         px: { xs: 0, md: 6 },
+        zIndex: 1,
       }}
     >
       {/* ── MOBILE LAYOUT ── */}
@@ -27,7 +28,7 @@ export default function MaßeSection() {
         }}
       >
         {/* 1. Heading */}
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 5, mt: 8, px: 2 }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3, mt: 5, px: 2, fontFamily: "lobster",  fontSize:"2.2rem" }}>
           Maße
         </Typography>
 
@@ -36,16 +37,16 @@ export default function MaßeSection() {
           variant="body1"
           sx={{ opacity: 0.9, px: 3, mb: 5, lineHeight: 1.8 }}
         >
-          Shop 2 hat die idealen Maße, um Spielspaß überall zu bieten. Kompakt
-          und gut organisiert bietet er genug Platz für mehrere Greifautomaten
-          voller bunter Plüschtiere, ohne den Jahrmarktsbereich zu
-          beeinträchtigen.
+          Der Stand hat drei Ebenen im Veranstaltungsbereich.
+          Er ist hell beleuchtet, aus der Ferne gut sichtbar und behindert die Besucher nicht.
+          Ein zusätzlicher Bereich lädt zum Verweilen und Genießen der Getränke ein.
+          Die Abmessungen sind unten in der Beschreibung angegeben.
         </Typography>
 
         {/* 3. Dimension image — with left/right padding */}
         <Box sx={{ width: "100%", px: 4, mb: 5 }}>
           <Image
-            src="/shop1/dimension-img.png"
+            src="/shop1/dimension-img.webp"
             alt="Dimension Illustration"
             width={400}
             height={300}
@@ -56,35 +57,35 @@ export default function MaßeSection() {
         {/* 4. Shop image — full width, no padding */}
         <Box sx={{ width: "100%", mb: 0, position: "relative" }}>
           <Image
-            src="/pyramid/mabe.png"
+            src="/pyramid/mabe.webp"
             alt="Hauptshop"
             width={400}
             height={300}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
           {/* Overlay Image */}
-         
+
         </Box>
 
         {/* 5. Caption */}
-        
+
       </Box>
 
       {/* ── DESKTOP LAYOUT (original) ── */}
-      <Box sx={{ display: { xs: "none", md: "block" } }}>
+      <Box sx={{ display: { xs: "none", md: "block" }, px: 8 }}>
         {/* Heading */}
         <Box textAlign="center" mb={3}>
-          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3 }}>
+          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3, fontFamily: "lobster", fontsize: "2.2rem" }}>
             Maße
           </Typography>
           <Typography
             variant="body1"
             sx={{ maxWidth: 700, mx: "auto", opacity: 0.9 }}
           >
-            Shop 2 hat die idealen Maße, um Spielspaß überall zu bieten. Kompakt
-            und gut organisiert bietet er genug Platz für mehrere Greifautomaten
-            voller bunter Plüschtiere, ohne den Jahrmarktsbereich zu
-            beeinträchtigen.
+            Der Stand hat drei Ebenen im Veranstaltungsbereich.
+            Er ist hell beleuchtet, aus der Ferne gut sichtbar und behindert die Besucher nicht.
+            Ein zusätzlicher Bereich lädt zum Verweilen und Genießen der Getränke ein.
+            Die Abmessungen sind unten in der Beschreibung angegeben.
           </Typography>
         </Box>
 
@@ -100,9 +101,9 @@ export default function MaßeSection() {
           }}
         >
           {/* Left Image */}
-          <Box sx={{ flex: "0 1 55%", maxWidth: 800, mx: "auto", ml: 2 }}>
+          <Box sx={{ flex: "0 1 55%", maxWidth: 600, mx: "auto", ml: 6 }}>
             <Image
-              src="/shop1/dimension-img.png"
+              src="/shop1/dimension-img.webp"
               alt="Dimension Illustration"
               width={400}
               height={300}
@@ -121,11 +122,11 @@ export default function MaßeSection() {
             }}
           >
             <Image
-              src="/pyramid/mabe.png"
+              src="/pyramid/mabe.webp"
               alt="Hauptshop"
               width={400}
               height={300}
-              style={{ width: "100%", height: "auto", display: "block" }}
+              style={{ width: "100%", height: "auto", display: "block", borderRadius: "30px" }}
             />
 
             {/* Overlay Image */}
@@ -139,17 +140,17 @@ export default function MaßeSection() {
               }}
             >
               <Image
-                src="/pyramid/mabe-overlay-02.png"
+                src="/pyramid/mabe-overlay-02.webp"
                 alt="Overlay"
                 width={150}
                 height={150}
-                style={{ width: "100%", height: "auto", display: "block" }}
+                style={{ width: "80%", height: "auto", display: "block" }}
               />
             </Box>
 
             <Typography
               variant="body2"
-              sx={{ mt: 5, opacity: 1, fontStyle: "normal" }}
+              sx={{ mt: 2, opacity: 1, fontStyle: "normal", fontSize: "17px", lineHeight: 1.7 }}
             >
               Technische Daten: Breite - 12,00m<br />Tiefe - 5,70m open
             </Typography>

@@ -9,16 +9,16 @@ export default function HeroSection() {
             <Box
                 sx={{
                     display: { xs: "none", md: "flex" },
-                    height: "auto",
+                    height: {xl:"685px",lg:"100vh"},
                     alignItems: "center",
                     backgroundImage: `
                         linear-gradient(259deg, #4C1663 100%, #0F041400 10%),
-                        url('/shop1/background.png')
+                        url('/shop1/background.webp')
                     `,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    px: { xs: 2, md: 6 },
+                    px: { xs: 2, md: 12 },
                     pt: 8,
                     pb: 0,
                 }}
@@ -65,9 +65,9 @@ export default function HeroSection() {
                             Spiel mit, sammle Punkte und sichere dir deine <br />Wunschprämie!
                         </Typography>
 
-                        <Box sx={{ width: { xs: 100, sm: 130, md: 400 }, height: "auto", lineHeight: 0 }}>
+                        <Box sx={{ width: { xs: 100, sm: 130, md: 350 }, height: "auto", lineHeight: 0, mt: { xl: 8 }, }}>
                             <Image
-                                src="/shop1/joker-shop1.png"
+                                src="/shop1/joker-shop1.webp"
                                 alt="Joker Character"
                                 width={150}
                                 height={150}
@@ -83,21 +83,28 @@ export default function HeroSection() {
                             <Box
                                 sx={{
                                     position: "absolute",
-                                    width: { xs: 220, sm: 300, md: 900 },
+                                    width: { xs: 220, sm: 300, md: 900 }, // container width
                                     height: "auto",
-                                    top: "-10px",
+                                    top: { lg: "-30px", xl: "-60px" },
                                     left: "300px",
                                     transform: "translate(-50%, -50%)",
                                 }}
                             >
-                                <Image
-                                    src="/shop1/machine-shop1.webp"
-                                    alt="Arcade Machine"
-                                    width={500}
-                                    height={600}
-                                    style={{ width: "100%", height: "auto" }}
-                                    priority
-                                />
+                                <Box
+                                    sx={{
+                                        width: { lg: "100%", xl: "130%" }, // responsive image width
+                                        height: "auto",
+                                    }}
+                                >
+                                    <Image
+                                        src="/shop1/machine-shop1.webp"
+                                        alt="Arcade Machine"
+                                        width={500}
+                                        height={600}
+                                        style={{ width: "100%", height: "auto" }} // fill container
+                                        priority
+                                    />
+                                </Box>
                             </Box>
                         </Box>
                     </Grid>
@@ -109,11 +116,11 @@ export default function HeroSection() {
             <Box
                 sx={{
                     display: { xs: "flex", md: "none" },
-                    height: "60vh",
+                    height: "450px",
                     flexDirection: "column",
                     backgroundImage: `
             linear-gradient(259deg, #4C1663 100%, #0F041400 10%),
-            url('/shop1/background.png')
+            url('/shop1/background.webp')
         `,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
@@ -140,7 +147,7 @@ export default function HeroSection() {
                         alt="Arcade Machine"
                         width={400}
                         height={400}
-                        style={{ width: "100%", height: "auto", display: "block", opacity:0.5 }}
+                        style={{ width: "100%", height: "auto", display: "block", opacity: 0.5 }}
                         priority
                     />
                 </Box>
@@ -157,9 +164,9 @@ export default function HeroSection() {
                             textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
                             lineHeight: 1.3,
                             mb: 1,
-                            ml:1,
-                            fontSize:"22px",
-                            
+                            ml: 1,
+                            fontSize: "22px",
+
                         }}
                     >
                         SpanMünze einwerfen. <br />
@@ -168,17 +175,19 @@ export default function HeroSection() {
                     </Typography>
 
                     <Typography
-                            variant="h6"
-                            sx={{ color: "white", fontWeight: 300, mb: 1, ml:1.5, mt:2 , fontSize:"17px", lineHeight:1.3}}
-                        >
-                            Spiel mit, sammle Punkte<br/> und sichere dir deine <br />Wunschprämie!
-                        </Typography>
+                        variant="h6"
+                        sx={{ color: "white", fontWeight: 300, mb: 1, ml: 1.5, mt: 2, fontSize: "17px", lineHeight: 1.3 }}
+                    >
+                        Spiel mit, sammle Punkte<br /> und sichere dir deine <br />Wunschprämie!
+                    </Typography>
 
                     {/* Joker — pushed to bottom */}
-                    <Box sx={{ width: 210, height: "auto", mt: "auto" , ml: -8,      // 👈 move left (increase negative value to go more left)
-    mb: -0.8, }}>
+                    <Box sx={{
+                        width: 210, height: "auto", mt: "auto", ml: -8,      // 👈 move left (increase negative value to go more left)
+                        mb: -3,
+                    }}>
                         <Image
-                            src="/shop1/joker-shop1.png"
+                            src="/shop1/joker-shop1.webp"
                             alt="Joker Character"
                             width={110}
                             height={110}

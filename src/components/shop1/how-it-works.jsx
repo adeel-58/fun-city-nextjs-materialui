@@ -130,7 +130,7 @@ export default function HowItWorksSection() {
 
                 {/* Heading */}
                 <Box textAlign="center" mb={4}>
-                    <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 }}>
+                    <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4,fontSize:"2.2rem" }}>
                         Wie es funktioniert ?
                     </Typography>
                    <Box

@@ -25,15 +25,15 @@ export default function Shop1() {
       <Box
         sx={{
           position: "absolute",
-          top:{ xs: "1100px", md: "1250px" },
+          top:{ xs: "1130px", md: "1250px",xl:"1400px" },
           
           left: { xs: -20, md: -30} ,// 👈 adjust horizontal position
           zIndex: 20, // higher than sections
-          width: { xs: 150, md: 250, lg:500 },
+          width: { xs: 150, md: 250, lg:350 },
         }}
       >
         <Image
-          src="/pyramid/mabe-overlay-01.png"
+          src="/pyramid/mabe-overlay-01.webp"
           alt="Coin Overlay"
           width={180}
           height={180}

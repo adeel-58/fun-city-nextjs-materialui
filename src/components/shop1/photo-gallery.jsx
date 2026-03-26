@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function PhotoGallerySection() {
   const galleryImages = [
-    "/shop1/image5-shop1.png",
+    "/shop1/image5-shop1.webp",
     "/shop1/image6-shop1.webp",
     "/shop1/image7-shop1.webp",
     "/shop1/image8-shop1.webp",
@@ -87,8 +87,9 @@ export default function PhotoGallerySection() {
             sx={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
-              gap: 1,
+              gap: 1,rowGap:2.5,
               width: "100%",
+              
             }}
           >
             {galleryImages.map((src, i) => (
@@ -113,13 +114,13 @@ export default function PhotoGallerySection() {
         </Box>
 
         {/* ── DESKTOP LAYOUT (original) ── */}
-        <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <Box sx={{ display: { xs: "none", md: "block" } , px:8}}>
 
           {/* Heading */}
           <Box mb={4}>
             <Typography
               variant="h4"
-              sx={{ fontWeight: "bold", mb: 4, ml: 2, fontSize: { md: "2.5rem" } }}
+              sx={{ fontWeight: "bold", mb: 4, ml: 2, fontSize: { md: "2.2rem" }, textAlign:"center" }}
             >
               Fotogalerie
             </Typography>
@@ -146,7 +147,7 @@ export default function PhotoGallerySection() {
                 mb: 4,
               }}
             >
-              {["/shop1/image5-shop1.png", "/shop1/image6-shop1.webp", "/shop1/image7-shop1.webp"].map((src, i) => (
+              {["/shop1/image5-shop1.webp", "/shop1/image6-shop1.webp", "/shop1/image7-shop1.webp"].map((src, i) => (
                 <Box
                   key={i}
                   sx={{

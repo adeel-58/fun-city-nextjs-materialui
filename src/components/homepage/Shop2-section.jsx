@@ -2,7 +2,7 @@
 import { Box, Typography, Container, Button } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
+import Link from "next/link";
 export default function Shop2section() {
     const [isButtonVisible, setIsButtonVisible] = useState(false);
     const buttonRef = useRef(null);
@@ -69,7 +69,7 @@ export default function Shop2section() {
                     }}
                 >
                     <Image
-                        src="/homepage/shop2-mobile.png"
+                        src="/homepage/shop2-mobile.webp"
                         alt="Game Machine"
                         fill
                         style={{
@@ -117,6 +117,8 @@ export default function Shop2section() {
                     </Typography>
 
                     <Button
+                        component={Link}
+                        href="/shop2"
                         variant="contained"
                         sx={{
                             bgcolor: "white",
@@ -127,8 +129,6 @@ export default function Shop2section() {
                             borderRadius: "40px",
                             textTransform: "none",
                             mb: 9,
-                          
-
                         }}
                     >
                         SEE SHOP 2
@@ -213,29 +213,27 @@ export default function Shop2section() {
 
                             {/* Button sliding from right */}
                             <Box ref={buttonRef} textAlign="right" sx={{ position: "relative", zIndex: 1 }}>
+
+
                                 <Button
+                                    component={Link}
+                                    href="/shop2"
                                     variant="contained"
                                     sx={{
                                         position: "relative",
                                         bgcolor: "white",
                                         color: "#5C026B",
                                         fontWeight: "bold",
-                                        
-                                        px: { xs: 37, xl: 50 },
+                                        px: { xs: 37, xl: 25 },
                                         py: 3,
                                         borderRadius: "40px 0 0 40px",
                                         textTransform: "none",
                                         overflow: "hidden",
                                         zIndex: 1,
-                                        
                                         transform: isButtonVisible ? "translateX(0)" : "translateX(100%)",
                                         transition: "transform 0.6s ease-out",
-                                        //justifyContent: "flex-end",
-                                       // pr: 69,   // 🔹 small left padding so text hugs left corner
-                                        //pr: 8,  // 🔹 keep right padding big so button remains wide
-                                        mr:{xl:-30,md:-15},
+                                        mr: { xl: -25, md: -15 },
                                         whiteSpace: "nowrap",
-                                       
                                     }}
                                 >
                                     SEE SHOP 2

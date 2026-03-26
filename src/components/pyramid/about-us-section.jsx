@@ -12,7 +12,7 @@ export default function AboutUsSection() {
         py: { xs: 6, md: 10 },
         px: { xs: 2, md: 6 },
         overflow: "hidden",
-        height: { xs: "auto", md: "750px" },
+        height: { xs: "auto", md: "680px" },
       }}
     >
       {/* Left chain */}
@@ -29,7 +29,7 @@ export default function AboutUsSection() {
         }}
       >
         <Image
-          src="/pyramid/goldchains.png"
+          src="/pyramid/goldchains.webp"
           alt="Glow Overlay"
           width={800}
           height={400}
@@ -51,7 +51,7 @@ export default function AboutUsSection() {
         }}
       >
         <Image
-          src="/pyramid/goldchains.png"
+          src="/pyramid/goldchains.webp"
           alt="Glow Overlay"
           width={800}
           height={400}
@@ -71,7 +71,7 @@ export default function AboutUsSection() {
         }}
       >
         {/* 1. Heading */}
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4, pr: 28, fontSize: "25px" }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4,mt:4, pr: 0, fontSize: "25px",fontFamily:"lobster",fontSize:"1.8rem",textAlign:"center" }}>
           Über uns
         </Typography>
 
@@ -86,7 +86,7 @@ export default function AboutUsSection() {
           }}
         >
           <Image
-            src="/pyramid/about-us.png"
+            src="/pyramid/about-us.webp"
             alt="Arcade Machine"
             width={600}
             height={400}
@@ -123,10 +123,10 @@ export default function AboutUsSection() {
       </Box>
 
       {/* ── DESKTOP LAYOUT (original) ── */}
-      <Box sx={{ display: { xs: "none", md: "block" } }}>
+      <Box sx={{ display: { xs: "none", md: "block" }, px:9 }}>
         {/* Heading + Full Width Line */}
         <Box sx={{ position: "relative", zIndex: 10, mb: 4, ml: 2 }}>
-          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 }}>
+          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4, textAlign:"center", mt:4,fontFamily:"lobster",fontSize:"2.2rem" }}>
             Über uns
           </Typography>
           <Box
@@ -150,14 +150,11 @@ export default function AboutUsSection() {
           {/* Left Side */}
           <Grid item xs={12} md={6}>
             <Typography variant="h5" sx={{ fontWeight: "bold", mb: 5 }}>
-              Wir bringen Spielspaß und<br /> Belohnung zusammen!
+              Tauche ein in die magische Atmosphäre<br/> der Winterpyramide!
             </Typography>
 
             <Typography variant="body1" sx={{ opacity: 0.9, mb: 4, fontSize: "15px" }}>
-              Shop 2 ist der Ort, an dem Spielspaß auf suße Gewinne trifft. Mit nur einer<br />
-              Munze und etwas Glucksteuerst du die Klaue und fangst bunte <br />
-              Plüschtiere. Spannung, Freude und ein kuscheliges Andenken bei jedem <br />
-              Versuch!
+              Ob gemütlich drinnen zwischen funkelnden Weihnachtsdekorationen oder<br/> draußen am wärmenden Lagerfeuer – hier ist jeder Besuch voller Feststimmung. <br/>Genieße heiße Schokolade, Glühwein, winterliche Heißgetränke oder einen wärmenden<br/> Schuss Likör, dazu winterliche Punschvariationen, aromatische Eierlikör-Drinks,<br/> heißen Apfelwein und festliche Cocktails. Kombiniere deine Getränke mit herzhaften <br/>Bratwürsten, frisch gebackenen Weihnachtsgebäcken, Lebkuchen und anderen saisonalen <br/>Köstlichkeiten – für ein rundum stimmungsvolles Wintererlebnis.<br/> Die Winterpyramide verbindet Freunde, Genuss und Weihnachtszauber auf<br/> einzigartige Weise.
             </Typography>
           </Grid>
 
@@ -166,15 +163,15 @@ export default function AboutUsSection() {
             <Box
               sx={{
                 position: "absolute",
-                top: { xs: 0, md: -30, lg: 30 },
-                right: { xs: "50%", md: -760, lg: -680 },
+                top: { xs: 0, md: -30, lg: 40 ,xl:30},
+                right: { xs: "50%", md: -760, lg: -480, xl:-580 },
                 transform: { xs: "translateX(50%)", md: "none" },
                 zIndex: 50,
-                width: { xs: "400px", md: "760px", lg: "600px" },
+                width: { xs: "400px", md: "760px", lg: "500px" ,xl:"500px" },
               }}
             >
               <Image
-                src="/pyramid/about-us.png"
+                src="/pyramid/about-us.webp"
                 alt="Arcade Machine"
                 width={600}
                 height={400}

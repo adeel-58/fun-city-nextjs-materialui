@@ -9,16 +9,16 @@ export default function HeroSection() {
             <Box
                 sx={{
                     display: { xs: "none", md: "flex" },
-                    height: "auto",
+                    height: {xl:"685px",lg:"100vh"},
                     alignItems: "center",
                     backgroundImage: `
                         linear-gradient(259deg, #4C1663 100%, #0F041400 10%),
-                        url('/shop1/background.png')
+                        url('/shop1/background.webp')
                     `,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    px: { xs: 2, md: 6 },
+                    px: { xs: 2, md: 12 },
                     pt: 8,
                     pb: 0,
                 }}
@@ -52,15 +52,15 @@ export default function HeroSection() {
                         </Typography>
 
                         <Typography variant="h6" sx={{ color: "white", fontWeight: 300, mb: 1 }}>
-                            Tauche ein in Spielspaß und Spannung!<br />
+                            <span style={{fontWeight:"bold"}}>Tauche ein in Spielspaß und Spannung!</span><br />
                             Wirf eine Münze ein, bewege den Hebel und fang dein<br />
                             Kuscheltier. Jeder Versuch bringt Freude und die Chance<br />
                             auf einen plüschigen Gewinn
                         </Typography>
 
-                        <Box sx={{ width: { xs: 100, sm: 130, md: 400 }, height: "auto", lineHeight: 0 }}>
+                        <Box sx={{ width: { xs: 100, sm: 130, md: 350 }, height: "auto", lineHeight: 0, mt: { xl: 15 }, }}>
                             <Image
-                                src="/shop1/joker-shop1.png"
+                                src="/shop1/joker-shop1.webp"
                                 alt="Joker Character"
                                 width={150}
                                 height={150}
@@ -76,15 +76,15 @@ export default function HeroSection() {
                             <Box
                                 sx={{
                                     position: "absolute",
-                                    width: { xs: 220, sm: 300, md: 800 },
+                                    width: { xs: 220, sm: 300, md: 800, xl: 1050 },
                                     height: "auto",
-                                    top: "-30px",
-                                    left: "300px",
+                                    top: { md: "-30px", xl: "-90px" },
+                                    left: { md: "300px", xl: "400px" },
                                     transform: "translate(-50%, -50%)",
                                 }}
                             >
                                 <Image
-                                    src="/shop2/main-machine.png"
+                                    src="/shop2/main-machine.webp"
                                     alt="Arcade Machine"
                                     width={500}
                                     height={600}
@@ -101,11 +101,11 @@ export default function HeroSection() {
             <Box
                 sx={{
                     display: { xs: "flex", md: "none" },
-                    height: "60vh",
+                    height: "450px",
                     flexDirection: "column",
                     backgroundImage: `
                         linear-gradient(259deg, #4C1663 100%, #0F041400 10%),
-                        url('/shop1/background.png')
+                        url('/shop1/background.webp')
                     `,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
@@ -128,7 +128,7 @@ export default function HeroSection() {
                     }}
                 >
                     <Image
-                        src="/shop2/main-machine.png"
+                        src="/shop2/main-machine.webp"
                         alt="Arcade Machine"
                         width={400}
                         height={400}
@@ -171,11 +171,11 @@ export default function HeroSection() {
                             height: "auto",
                             mt: "auto",
                             ml: -8,
-                            mb: -0.8,
+                            mb: -3,
                         }}
                     >
                         <Image
-                            src="/shop1/joker-shop1.png"
+                            src="/shop1/joker-shop1.webp"
                             alt="Joker Character"
                             width={110}
                             height={110}

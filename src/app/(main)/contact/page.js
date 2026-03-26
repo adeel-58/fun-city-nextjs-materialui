@@ -38,7 +38,7 @@ export default function ContactPage() {
       <Box
         sx={{
           display: { xs: "block", md: "none" },
-          pt: 8,
+          pt: 3,
           pb: 12,
           position: "relative",
           overflow: "hidden",
@@ -94,7 +94,7 @@ export default function ContactPage() {
               mb: 9,
             }}
           >
-            Contact
+            Kontakt
           </Typography>
 
           {/* Phone image box */}
@@ -129,7 +129,7 @@ export default function ContactPage() {
           </Box>
 
           {/* Form */}
-          <Box sx={{ width: "100%", px: 3 }}>
+          <Box sx={{ width: "100%", px: 3,mt:-6 }}>
             <form onSubmit={handleSubmit}>
               <Box sx={{ display: "flex", flexDirection: "column", gap: 3, px: 2 }}>
 
@@ -203,7 +203,7 @@ export default function ContactPage() {
           height={650}
           style={{
             position: "absolute",
-            bottom: -20,
+            bottom: -50,
             left: "26%",
             transform: "translateX(-50%)",
             opacity: 1,
@@ -221,11 +221,11 @@ export default function ContactPage() {
                 fontWeight: "bold",
                 mb: 3.3,
                 fontFamily: "Poppins",
-                mt: 10,
-                fontSize: { xs: "2.5rem", md: "3rem" },
+                mt: 7,
+                fontSize: { xs: "1.8rem", md: "2.2rem" },
               }}
             >
-              Contact
+              Kontakt
             </Typography>
             
           </Box>
@@ -237,7 +237,7 @@ export default function ContactPage() {
               gap: 8,
               alignItems: "flex-start",
               flexDirection: "row",
-              mt: 25,
+              mt: 20,
               mb: 20,
             }}
           >
@@ -276,7 +276,7 @@ export default function ContactPage() {
             {/* Right — form */}
             <Box sx={{ flex: 1, maxWidth: "550px" }}>
               <form onSubmit={handleSubmit}>
-                <Box sx={{ display: "flex", mt: -4, gap: 5, mb: 5, flexDirection: { xs: "column", sm: "row" } }}>
+                <Box sx={{ display: "flex", mt: -10, gap: 5, mb: 5, flexDirection: { xs: "column", sm: "row" } }}>
                   <TextField
                     fullWidth name="firstName" label="VORNAME" size="small"
                     value={formData.firstName} onChange={handleInputChange}

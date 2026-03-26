@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function PhotoGallerySection() {
   const galleryImages = [
-    "/pyramid/gallary-image1.png",
-    "/pyramid/gallary-image4.png",
-    "/pyramid/gallary-image3.png",
-    "/pyramid/gallary-image2.png",
+    "/pyramid/gallary-image1.webp",
+    "/pyramid/gallary-image4.webp",
+    "/pyramid/gallary-image3.webp",
+    "/pyramid/gallary-image2.webp",
   ];
 
   return (
@@ -17,8 +17,8 @@ export default function PhotoGallerySection() {
         bgcolor: "#2C3D29",
         color: "white",
         pt: 0,
-        pb: { xs: 5, md: 20 },
-        
+        pb: { xs: 5, md: 7 },
+
         px: { xs: 2, md: 6 },
         overflow: "hidden",
         mb: 0,
@@ -29,18 +29,18 @@ export default function PhotoGallerySection() {
         sx={{
           display: { xs: "none", md: "block" },
           position: "absolute",
-          top: "90%",
-          left: "25%",
+          top: "94%",
+          left: "20%",
           transform: "translate(-50%, -50%)",
           zIndex: 1,
-          width: { md: 640, lg: 700 },
+          width: { md: 540, lg: 700 },
           height: "auto",
           opacity: 1,
           pointerEvents: "none",
         }}
       >
         <Image
-          src="/pyramid/lightening-overlay.png"
+          src="/pyramid/lightening-overlay.webp"
           alt="Center Overlay"
           width={600}
           height={400}
@@ -58,7 +58,7 @@ export default function PhotoGallerySection() {
           {/* Heading */}
           <Typography
             variant="h4"
-            sx={{ fontWeight: "bold", mb: 6, textAlign: "center", fontSize: "1.8rem" }}
+            sx={{ fontWeight: "bold", mb: 6, textAlign: "center", fontSize: "1.8rem",fontFamily:"lobster" }}
           >
             Fotogalerie
           </Typography>
@@ -68,7 +68,7 @@ export default function PhotoGallerySection() {
             sx={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
-              gap: 1,
+              gap: 2,
               width: "100%",
             }}
           >
@@ -94,23 +94,23 @@ export default function PhotoGallerySection() {
         </Box>
 
         {/* ── DESKTOP LAYOUT (original) ── */}
-        <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <Box sx={{ display: { xs: "none", md: "block" } , px:8}}>
 
           {/* Heading */}
           <Box mb={4}>
             <Typography
               variant="h4"
-              sx={{ fontWeight: "bold", mb: 4, ml: 2, fontSize: { md: "2.5rem" } }}
+              sx={{ fontWeight: "bold", mb: 4, ml: 2, fontSize: { md: "2.2rem" }, textAlign:"center",fontFamily:"lobster" }}
             >
               Fotogalerie
             </Typography>
             <Box
               sx={{
                 width: "100%",
-    height: "6px",
-    background: "linear-gradient(90deg, #666666 0%, #666666 50%, #81081a 50%, #81081a 75%, #666666 75%, #666666 100%)",
-    mx: "auto",
-    borderRadius: "2px",
+                height: "6px",
+                background: "linear-gradient(90deg, #666666 0%, #666666 50%, #81081a 50%, #81081a 75%, #666666 75%, #666666 100%)",
+                mx: "auto",
+                borderRadius: "2px",
                 mb: 8,
               }}
             />
@@ -123,7 +123,7 @@ export default function PhotoGallerySection() {
             <Box
               sx={{
                 position: "absolute",
-                left: 0,
+                left: 12,
                 top: 0,
                 borderRadius: "20px",
                 overflow: "hidden",
@@ -133,7 +133,7 @@ export default function PhotoGallerySection() {
               }}
             >
               <Image
-                src="/pyramid/gallary-image1.png"
+                src="/pyramid/gallary-image1.webp"
                 alt="Gallery Image 1"
                 width={400}
                 height={550}
@@ -144,7 +144,7 @@ export default function PhotoGallerySection() {
             {/* Right Side Images Container */}
             <Box
               sx={{
-                marginLeft: "50%",
+                marginLeft: { xl: "46%", lg: "48%" },
                 display: "flex",
                 flexDirection: "column",
                 gap: 3.5,
@@ -156,7 +156,7 @@ export default function PhotoGallerySection() {
                   sx={{ borderRadius: "20px", overflow: "hidden", width: "300px", height: "430px" }}
                 >
                   <Image
-                    src="/pyramid/gallary-image4.png"
+                    src="/pyramid/gallary-image4.webp"
                     alt="Gallery Image 2"
                     width={250}
                     height={200}
@@ -167,7 +167,7 @@ export default function PhotoGallerySection() {
                   sx={{ borderRadius: "20px", overflow: "hidden", width: "300px", height: "430px" }}
                 >
                   <Image
-                    src="/pyramid/gallary-image3.png"
+                    src="/pyramid/gallary-image3.webp"
                     alt="Gallery Image 3"
                     width={250}
                     height={200}
@@ -178,10 +178,10 @@ export default function PhotoGallerySection() {
 
               {/* Bottom Right — 1 wide image */}
               <Box
-                sx={{ borderRadius: "20px", overflow: "hidden", width: "600px", height: "400px" }}
+                sx={{ borderRadius: "20px", overflow: "hidden", width: {lg:"600px",xl:"640px"}, height: "400px" }}
               >
                 <Image
-                  src="/pyramid/gallary-image2.png"
+                  src="/pyramid/gallary-image2.webp"
                   alt="Gallery Image 4"
                   width={502}
                   height={320}
