@@ -1,4 +1,13 @@
-"use client";
+//"use client";
+export const metadata = {
+  title: "Automatenshop – Spiele & Gewinne | Fun City",
+  description:
+    "Spiele im Automatenshop von Fun City, sammle Punkte und tausche sie gegen tolle Preise ein. Arcade-Spaß für alle!",
+  alternates: {
+    canonical: "/shop1",
+  },
+};
+
 import { Box } from "@mui/material"; 
 import Image from "next/image";
 import Herosection from "../../../components/shop1/hero-section";
@@ -14,7 +23,7 @@ export default function Shop1() {
       sx={{
         bgcolor: "#121214", 
         minHeight: "100vh",
-        position: "relative", // 👈 important for absolute positioning
+        position: "relative",
       }}
     >
       <Herosection />
@@ -24,11 +33,9 @@ export default function Shop1() {
       <Box
         sx={{
           position: "absolute",
-         // top: "1300px", // 👈 adjust so it's exactly between the 2 sections
-          top: {xs: "670px", md: "1250px",xl:"1330px" }, // mobile | tablet | desktop
-         left: {xs: -15, md: -10 }, // mobile | tablet | desktop
-         // left:-30, // 👈 adjust horizontal position
-          zIndex: 20, // higher than sections
+          top: {xs: "670px", md: "1250px",xl:"1330px" },
+         left: {xs: -15, md: -10 },
+          zIndex: 20,
           width: { xs: 100, md: 200 },
           opacity:1111,
         }}

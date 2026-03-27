@@ -103,10 +103,10 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                info@funcity.de
+                bauermeister@fun-city.info
               </Typography>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                +49 123 456 789
+                +49 177 4752861
               </Typography>
             </Box>
           </Grid>
@@ -151,7 +151,7 @@ export default function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
               <Typography variant="body2" sx={{ fontSize: "14px", opacity: 0.8 }}>
-                +49 123 456 789
+                +49 177 4752861
               </Typography>
             </Box>
           </Grid>

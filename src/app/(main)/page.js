@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Fun City – Spiel, Spaß & Unterhaltung",
+  description:
+    "Erlebe Fun City mit Arcade-Spielen, Greifautomaten und der Winterpyramide. Spaß, Spannung und tolle Gewinne warten auf dich.",
+};
+
 
 import Herosection from "../../components/homepage/Hero-section";
 import AboutUsSection from "../../components/homepage/About-us-section";

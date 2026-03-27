@@ -1,4 +1,14 @@
-"use client";
+//"use client";
+export const metadata = {
+  title: "Greifautomat – Kuscheltiere gewinnen | Fun City",
+  description:
+    "Teste dein Glück am Greifautomaten bei Fun City und gewinne süße Plüschtiere. Spannung und Spaß bei jedem Versuch!",
+  alternates: {
+    canonical: "/shop2",
+  },
+};
+
+
 import { Box } from "@mui/material"; 
 import Image from "next/image";
 import Herosection from "../../../components/shop2/hero-section";
@@ -16,7 +26,7 @@ export default function Shop1() {
       sx={{
         bgcolor: "#121214", 
         minHeight: "100vh",
-        position: "relative", // 👈 important for absolute positioning
+        position: "relative",
       }}
     >
       <Herosection />

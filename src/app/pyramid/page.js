@@ -1,4 +1,14 @@
-"use client";
+//"use client";
+export const metadata = {
+  title: "Winterpyramide – Glühwein & Atmosphäre | Fun City",
+  description:
+    "Die Winterpyramide von Fun City bietet Glühwein, heiße Getränke und eine festliche Atmosphäre für kalte Abende.",
+  alternates: {
+    canonical: "/pyramid",
+  },
+};
+
+
 import { Box } from "@mui/material"; 
 import Image from "next/image";
 import Herosection from "../../components/pyramid/hero-section";
@@ -12,10 +22,9 @@ export default function Shop1() {
   return (
     <Box
       sx={{
-        bgcolor: "#121214", 
         bgcolor: "#2C3D29",
         minHeight: "100vh",
-        position: "relative", // 👈 important for absolute positioning
+        position: "relative",
       }}
     >
       <Herosection />
@@ -26,9 +35,8 @@ export default function Shop1() {
         sx={{
           position: "absolute",
           top:{ xs: "1130px", md: "1250px",xl:"1400px" },
-          
-          left: { xs: -20, md: -30} ,// 👈 adjust horizontal position
-          zIndex: 20, // higher than sections
+          left: { xs: -20, md: -30} ,
+          zIndex: 20,
           width: { xs: 150, md: 250, lg:350 },
         }}
       >
